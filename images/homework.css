@@ -1,0 +1,343 @@
+*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑" 
+		}
+		a{
+			color: black;
+			text-decoration:none;
+		}
+		li{
+			list-style: none;
+		}
+		.area{
+			width: 140px;
+			height: 20px;
+			float: left;
+		}
+		.town{
+			color: #c81623;
+			font-size: 15px;
+		}
+		.county{
+			color: #666666;
+			font-size: 13px;
+			margin:5px;
+		}
+		.area a{
+			color: #666666;
+			font-size: 13px;
+		}
+		.login{
+			float: right;
+			font-size: 14px;
+		}
+		.login a{
+			color: #5a5a5a;
+			margin-left: 20px;
+		}
+		.bigbox1{
+			overflow: hidden;
+			width: 1200px;
+			margin:0 auto;
+			height: 40px;
+			line-height:40px;
+		}
+		.head{
+			background-color: #f5f5f5;
+		}
+		._input{
+			height: 38px;
+			width: 420px;
+			border: 1px solid #be0108;	
+			float: right;
+			margin-top: 25px
+		}
+		.search{
+			width: 80px;
+			height: 40px;
+			background-color: #be0108;
+			color: white;
+			line-height:36px;
+			text-align: center;
+			float: right;
+			margin-right: 335px;
+			margin-top: 25px;
+			border-color: #be0108;
+			font-size: 20px;
+		}
+		.titleImg{
+			float: left;
+		}
+		.bigtitle{
+			overflow: hidden;
+			width: 1200px;
+			height: 80px;
+			vertical-align: middle;
+			margin:15px auto 35px auto;
+		}
+		.redbox{
+			background-color: #d70c19;
+			width: 220px;
+			height: 40px;
+			float: left;
+		}
+		.redbox a{
+			color: white;
+			line-height:40px;
+			margin-left:60px;
+			margin-right: 45px;
+			font-size: 16px;
+			
+		}
+		.whitebox{
+			float: left;
+			height: 40px;
+			width: 340px;
+		}
+		.whitebox a{
+			margin-left:50px;
+			font-size: 16px;
+			color:#333333;
+			line-height: 40px;
+		}
+		.img1{
+			margin-top: 10px;
+		}
+		.applyFor{
+			float: right;
+			color: #d70c19;	
+			line-height:40px;
+		}
+		.img2{
+			float: right;
+			margin:12px 11px 0 0;
+		}
+		div>.homePage{
+			color: #d70c19;
+		}
+		.navigation{
+			width: 1200px;
+			height: 40px;
+			margin:0 auto;
+		}
+		.redline{
+			height: 2px;
+			background-color: #d70c19;
+		}
+		.list1{
+			width:220px;
+			border-left:1px solid #dfdfdf;
+			border-right:1px solid #dfdfdf;
+			float: left;
+		}
+		.list1 li{
+			height:44px;
+			border-bottom:1px dashed #dfdfdf;
+			line-height: 44px;
+		}
+		.list1 a{
+			margin-left:69px;
+			color:#535353;
+			font-weight: bolder;
+			font-size:14px;
+		}
+		.img3{
+			float: left;
+			margin-left:8px;
+			margin-top:6px;
+			width: 670px;
+			height: 400px;
+		}
+		h1{
+			font-size: 16px;
+			color: #d70c19;
+			margin-bottom: 15px;
+			font-weight: normal;
+		}
+		.list2{
+			border-top: 1px solid #dfdfdf;
+			width: 260px;
+		}
+		.list2 li{
+			font-size: 13px;
+			height: 13px;
+			margin:11px 0;
+			display: inline-block;
+		}
+		.list2all{
+			padding: 16px 0px 30px 16px;
+			width: 284px;
+			background-color: #fafafa;
+			float: left;
+			margin-top:6px;
+		}
+		.list2 a{
+			color: #666666;
+		}
+		.conent{
+			overflow: hidden;
+			width: 1200px;
+			margin:0 auto;
+		}
+		.lolshop{
+			overflow: hidden;
+			width: 888px;
+		}
+		.lolshop h3{
+			float: left;
+			color:#d70c19;
+			font-size: 16px;
+		}
+		.lolshop h4{
+			float: right;
+			color:#999999;
+			font-size: 13px;
+		}
+		.img4{
+			float: left;
+			margin-top: 3px;
+		}
+		.list3 a{
+			display: block;
+			width: 270px;
+		}
+		.list3box1{
+			overflow: hidden;
+			height: 20px;
+			width: 270px;
+			margin-top:14px;
+			margin-bottom: 15px;
+		}
+		.list3box1 h3{
+			font-size: 14px;
+			color:#535353;
+			float: left;
+		}
+		.list3box1 p{
+			float: right;
+			font-size: 15px;
+			color:#989898;
+		}
+		.list3box2{
+			float: hidden;
+			height: 20px;
+			width: 270px;
+		}
+		.list3box21{
+			width: 120px;
+			height: 18px;
+			overflow: hidden;
+			background: url(l.png) no-repeat;
+			float: left;
+		}
+		.list3box21 p{
+			float: right;
+			color:#d9212b;
+		}
+		.list3box2>p{
+			float: right;
+			color:#989898;
+			font-size: 14px;
+			text-indent: 20px;
+			background: url(m.png) no-repeat;
+		}
+		.list3box2>span{
+			float: right ;
+			color:#666666;
+			font-size: 12px;
+		}
+		.list3box3{
+			font-size: 14px;
+			color: #535353;
+			margin-top:12px;
+			height: 14px;
+		}
+		.list3 li{
+			float: left;
+			padding:10px;
+			border:1px solid #dfdfdf;
+			margin:10px 2px 0 2px;
+		}
+		.list3{
+			width: 888px;
+			overflow: hidden;
+			float: left;
+		}
+		.sideleft{
+			float: left;
+		}
+		.sideright{
+			width: 296px;
+			float: right;
+		}
+		.sideright>.list3>li{
+			float: none;
+			width: 270px;
+		}
+		.productContent{
+			width: 1196px;
+			height: 1080PX;
+			overflow: hidden;
+			margin:18px auto 0 auto;
+		}
+		.img6{
+			float: left;
+			margin-top:3px;
+		}
+		.redw40{
+			background-color:#b70914;
+			height: 40px;
+			margin-top:30px;
+		}
+		.redw40 p{
+			width: 620px;
+			color: white;
+			line-height:40px;
+			margin:0 auto;
+			font-size: 14px;
+		}
+		.redw40 .word{
+			margin-left:119px;
+		}
+		.user{
+			width: 1155px;
+			font-size: 0;
+			margin:0 auto;
+		}
+		.user ul{
+			font-size: 16px;
+			display: inline-block;
+			vertical-align: top;
+			color: #c5103d;
+			width: 65px;
+			height: 123px;
+			margin:32px 50px;
+		}
+		.user li{
+			font-size: 12px;
+			color: #989898;
+			margin-top: 10px;
+		}
+		.user p{
+			font-size: 12px;
+		}
+		.view{
+			background-color: #f8f8f8;
+		}
+		.logobottom{
+			
+			line-height: 13px;
+			font-size: 12px;
+			margin:0 auto;
+			padding-top:25px;
+			width: 590px;
+			text-align: center;
+			color: #363636;
+		}
+		.logobottom p span{
+			display: inline-block;
+			margin:0 12px;
+			height: 13px;
+			font-weight:normal;
+		}

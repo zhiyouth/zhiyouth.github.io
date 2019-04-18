@@ -1,10 +1,788 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑" 
+		}
+		a{
+			color: black;
+			text-decoration:none;
+		}
+		li{
+			list-style: none;
+		}
+		.area{
+			width: 140px;
+			height: 20px;
+			float: left;
+		}
+		.town{
+			color: #c81623;
+			font-size: 15px;
+		}
+		.county{
+			color: #666666;
+			font-size: 13px;
+			margin:5px;
+		}
+		.area a{
+			color: #666666;
+			font-size: 13px;
+		}
+		.login{
+			float: right;
+			font-size: 14px;
+		}
+		.login a{
+			color: #5a5a5a;
+			margin-left: 20px;
+		}
+		.bigbox1{
+			overflow: hidden;
+			width: 1200px;
+			margin:0 auto;
+			height: 40px;
+			line-height:40px;
+		}
+		.head{
+			background-color: #f5f5f5;
+		}
+		._input{
+			height: 38px;
+			width: 420px;
+			border: 1px solid #be0108;	
+			float: right;
+			margin-top: 25px;
+			text-indent:10px;
+			outline: none;
+		}
+		.search{
+			width: 80px;
+			height: 40px;
+			background-color: #be0108;
+			color: white;
+			line-height:36px;
+			text-align: center;
+			float: right;
+			margin-right: 335px;
+			margin-top: 25px;
+			border:none;
+			font-size: 20px;
+			bolder:2px solid #be0108;
+			outline: none;
+			
+		}
+		.titleImg{
+			float: left;
+		}
+		.bigtitle{
+			overflow: hidden;
+			width: 1200px;
+			height: 80px;
+			vertical-align: middle;
+			margin:15px auto 35px auto;
+		}
+		.redbox{
+			background-color: #d70c19;
+			width: 220px;
+			height: 40px;
+			float: left;
+		}
+		.redbox a{
+			color: white;
+			line-height:40px;
+			margin-left:60px;
+			margin-right: 45px;
+			font-size: 16px;
+			
+		}
+		.whitebox{
+			float: left;
+			height: 40px;
+			width: 340px;
+		}
+		.whitebox a{
+			margin-left:50px;
+			font-size: 16px;
+			color:#333333;
+			line-height: 40px;
+		}
+		.img1{
+			margin-top: 10px;
+		}
+		.applyFor{
+			float: right;
+			color: #d70c19;	
+			line-height:40px;
+		}
+		.img2{
+			float: right;
+			margin:12px 11px 0 0;
+		}
+		div>.homePage{
+			color: #d70c19;
+		}
+		.navigation{
+			width: 1200px;
+			height: 40px;
+			margin:0 auto;
+		}
+		.redline{
+			height: 2px;
+			background-color: #d70c19;
+		}
+		.list1{
+			width:220px;
+			border-left:1px solid #dfdfdf;
+			border-right:1px solid #dfdfdf;
+			float: left;
+		}
+		.list1 li{
+			height:44px;
+			border-bottom:1px dashed #dfdfdf;
+			line-height: 44px;
+		}
+		.list1 a{
+			margin-left:69px;
+			color:#535353;
+			font-weight: bolder;
+			font-size:14px;
+		}
+		.img3{
+			float: left;
+			margin-left:8px;
+			margin-top:6px;
+			width: 670px;
+			height: 400px;
+		}
+		h1{
+			font-size: 16px;
+			color: #d70c19;
+			margin-bottom: 15px;
+			font-weight: normal;
+		}
+		.list2{
+			border-top: 1px solid #dfdfdf;
+			width: 260px;
+		}
+		.list2 li{
+			font-size: 13px;
+			height: 13px;
+			line-height:13px;
+			margin:11px 0 21px 0;
+			display:block;
+			white-space:nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.list2all{
+			padding: 16px 0px 30px 16px;
+			width: 284px;
+			background-color: #fafafa;
+			float: left;
+			margin-top:6px;
+		}
+		.list2 a{
+			color: #666666;
+
+		}
+		.conent{
+			overflow: hidden;
+			width: 1200px;
+			margin:0 auto;
+		}
+		.lolshop{
+			overflow: hidden;
+			width: 888px;
+		}
+		.lolshop h3{
+			float: left;
+			color:#d70c19;
+			font-size: 16px;
+		}
+		.lolshop h4{
+			float: right;
+			color:#999999;
+			font-size: 13px;
+		}
+		.img4{
+			float: left;
+			margin-top: 3px;
+		}
+		.list3 a{
+			display: block;
+			width: 270px;
+		}
+		.list3box1{
+			overflow: hidden;
+			height: 20px;
+			width: 270px;
+			margin-top:14px;
+			margin-bottom: 15px;
+		}
+		.list3box1 h3{
+			font-size: 14px;
+			color:#535353;
+			float: left;
+		}
+		.list3box1 p{
+			float: right;
+			font-size: 15px;
+			color:#989898;
+		}
+		.list3box2{
+			float: hidden;
+			height: 20px;
+			width: 270px;
+		}
+		.list3box21{
+			width: 120px;
+			height: 18px;
+			overflow: hidden;
+			background: url(images/l.png) no-repeat;
+			float: left;
+		}
+		.list3box21 p{
+			float: right;
+			color:#d9212b;
+		}
+		.list3box2>p{
+			float: right;
+			color:#989898;
+			font-size: 14px;
+			text-indent: 20px;
+			background: url(images/m.png) no-repeat;
+		}
+		.list3box2>span{
+			float: right ;
+			color:#666666;
+			font-size: 12px;
+		}
+		.list3box3{
+			font-size: 14px;
+			color: #535353;
+			margin-top:12px;
+			height: 14px;
+		}
+		.list3 li{
+			float: left;
+			padding:10px;
+			border:1px solid #dfdfdf;
+			margin:10px 2px 0 2px;
+		}
+		.list3{
+			width: 888px;
+			overflow: hidden;
+			float: left;
+		}
+		.sideleft{
+			float: left;
+		}
+		.sideright{
+			width: 296px;
+			float: right;
+		}
+		.sideright>.list3>li{
+			float: none;
+			width: 270px;
+		}
+		.productContent{
+			width: 1196px;
+			height: 1080PX;
+			overflow: hidden;
+			margin:18px auto 0 auto;
+		}
+		.img6{
+			float: left;
+			margin-top:3px;
+		}
+		.redw40{
+			background-color:#b70914;
+			height: 40px;
+			margin-top:30px;
+		}
+		.redw40 p{
+			width: 620px;
+			color: white;
+			line-height:40px;
+			margin:0 auto;
+			font-size: 14px;
+		}
+		.redw40 .word{
+			margin-left:119px;
+		}
+		.user{
+			width: 1155px;
+			font-size: 0;
+			margin:0 auto;
+		}
+		.user ul{
+			font-size: 16px;
+			display: inline-block;
+			vertical-align: top;
+			color: #c5103d;
+			width: 65px;
+			height: 123px;
+			margin:32px 50px;
+		}
+		.user li{
+			font-size: 12px;
+			color: #989898;
+			margin-top: 10px;
+		}
+		.user p{
+			font-size: 12px;
+		}
+		.view{
+			background-color: #f8f8f8;
+		}
+		.logobottom{
+			
+			line-height: 13px;
+			font-size: 12px;
+			margin:0 auto;
+			padding-top:25px;
+			width: 590px;
+			text-align: center;
+			color: #363636;
+		}
+		.logobottom p span{
+			display: inline-block;
+			margin:0 12px;
+			height: 13px;
+			font-weight:normal;
+		}
+	</style>
 </head>
 <body>
-	<h1>我我 我我我我我 </h1>
+<div class="head">
+	<div class="bigbox1">
+		<div class="area">
+			<span class="town">新乡市</span>
+			<span class="county">原阳县</span>
+			<a href="#">[切换]</a>
+		</div>
+		<div class="login">
+			<a href="">登陆</a>
+			<a href="">注册</a>
+			<a href="">消息(0)</a>
+			<a href="">免费开店</a>
+			<a href="">便民宝</a>
+			<a href="">便民网</a>
+			<a href="">网站地图</a>
+		</div>
+	</div>
+</div>
+
+<form class="bigtitle">
+	<img src="images/g.png" class="titleImg">	
+		<input type="submit" value="搜索" class="search"></div>
+		<input type="text" placeholder="请输入商品或品牌" class="_input">
+</form>
+
+<div class="navigation">	
+	<div class="redbox">
+		<a href="#">全部分类</a>
+		<img src="images/h.png" alt="" class="img1">
+	</div>
+	<div class="whitebox">
+		<a href="#" class="homePage">首页</a>
+		<a href="#">联盟分布</a>
+		<a href="#">招盟加商</a>
+	</div>
+		<a href="#" class="applyFor">申请联盟店</a>
+		<img src="images/i.png" class="img2">
+</div>	
+	<div class="redline"></div>
+
+<div class="conent">
+	<ul class="list1">
+		<li>
+			<a href="">日用百货</a>
+		</li>
+		<li>
+			<a href="">生活服务</a>
+		</li>
+		<li>
+			<a href="">美食 购物</a>
+		</li>
+		<li>
+			<a href="">娱乐休闲</a>
+		</li>
+		<li>
+			<a href="">旅游 酒店</a>
+		</li>
+		<li>
+			<a href="">数码 电器</a>
+		</li>
+		<li>
+			<a href="">美容护肤</a>
+		</li>
+		<li>
+			<a href="">丽人</a>
+		</li>
+		<li>
+			<a href="">电影</a>
+		</li>
+	</ul>
+	<img src="images/f.png" class="img3">
+	<div class="list2all">
+		<h1>最新活动</h1>
+		<ul class="list2">
+			<li>
+				<a href="">九九鸭翅：价值一元的麻辣鸭翅一份，提供啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">为美丽加分，超柔无痕美睫一次，女士专享啊啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">黄家老店，8人餐，滋味鲜美，邀您品鉴，啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">生日双享，欢乐加倍！金洋蛋糕特别推出豪啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">精致美味，信服滋味，韩翔福特别推出美味啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">为美丽加分，超柔无痕美睫一次，女士专享啊啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">生日双享，欢乐加倍！金洋蛋糕特别推出豪啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li></a>
+			<li>
+				<a href="">精致美味，信服滋味，韩翔福特别推出美味啊啊啊啊啊啊啊啊啊啊啊啊啊</a>
+			</li>
+			<li>
+				<a href="">星际桌球会所：价值32元的台球畅打2小时啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="productContent">
+	<div class="sideleft">
+		<div class="lolshop">
+			<img src="images/j.png" class="img4">
+			<h3>联盟店</h3> 
+			<h4>更多>></h4>
+		</div>
+			<ul class="list3">
+				<li>
+					<a href="">
+						<img src="images/d.png"class="img5">
+						<div class="list3box1">
+							<h3>三毛</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/a.png"class="img5">
+						<div class="list3box1">
+							<h3>大商集团</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/c.png"class="img5">
+						<div class="list3box1">
+							<h3>快天下</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/b.png"class="img5">
+						<div class="list3box1">
+							<h3>东苑超市</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/a.png"class="img5">
+						<div class="list3box1">
+							<h3>大商</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/d.png"class="img5">
+						<div class="list3box1">
+							<h3>城关联盟店</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/c.png"class="img5">
+						<div class="list3box1">
+							<h3>城关联盟店</h3>
+							<p>美食购物</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/e.png"class="img5">
+						<div class="list3box1">
+							<h3>三毛</h3>
+							<p>城关联盟店</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/d.png"class="img5">
+						<div class="list3box1">
+							<h3>三毛</h3>
+							<p>城关联盟店</p>
+						</div>
+						<div class="list3box2">
+							<div class="list3box21">
+								<p>5.0</p>
+								<span></span>
+							</div>
+							<span>：500</span>
+							<p>收藏</p>
+						</div>
+						<div class="list3box3">
+							客服电话：0371-8412782
+						</div>
+					</a>
+				</li>
+			</ul>
+	</div>
+	<div class="sideright">
+		<div class="lolshop">
+			<img src="images/k.png" alt="" class="img6">
+			<h3>推荐联盟</h3>
+		</div>
+		<ul class="list3">
+			<li>
+				<a href="">
+					<img src="images/a.png"class="img5">
+					<div class="list3box1">
+						<h3>大商</h3>
+						<p>美食购物</p>
+					</div>
+					<div class="list3box2">
+						<div class="list3box21">
+							<p>5.0</p>
+							<span></span>
+						</div>
+						<span>：500</span>
+						<p>收藏</p>
+					</div>
+					<div class="list3box3">
+						客服电话：0371-8412782
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/d.png"class="img5">
+					<div class="list3box1">
+						<h3>三毛</h3>
+						<p>美食购物</p>
+					</div>
+					<div class="list3box2">
+						<div class="list3box21">
+							<p>5.0</p>
+							<span></span>
+						</div>
+						<span>：500</span>
+						<p>收藏</p>
+					</div>
+					<div class="list3box3">
+						客服电话：0371-8412782
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/c.png"class="img5">
+					<div class="list3box1">
+						<h3>快天下</h3>
+						<p>美食购物</p>
+					</div>
+					<div class="list3box2">
+						<div class="list3box21">
+							<p>5.0</p>
+							<span></span>
+						</div>
+						<span>：500</span>
+						<p>收藏</p>
+					</div>
+					<div class="list3box3">
+						客服电话：0371-8412782
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="redw40">
+	<p>
+		<span>正规渠道 &nbsp;&nbsp;正品保证</span>
+		<span class="word">品类齐全 &nbsp;&nbsp;购物保证</span>
+		<span class="word">产地直供 &nbsp;&nbsp;原汁原味</span>
+	</p>
+</div>
+	<div class="user">
+		<ul>用户指南
+			<li> 注册应用</li>
+			<li>找回密码</li>
+			<li>便民宝</li>
+		</ul>
+		<ul>订单交易
+			<li>申请流程</li>
+			<li>我要加入</li>
+			<li>资质认证</li>
+			<li>信息发布</li>
+		</ul>
+		<ul>联盟店
+			<li>功能说明</li>
+			<li>常见问题</li>
+			<li>查找信息</li>
+			<li>联系我们</li>
+			
+		</ul>
+		<ul>合作社
+			<li>申请流程</li>
+			<li>我要加入</li>
+			<li>资质认证</li>
+			<li>信息发布</li>
+		</ul>
+		<ul>物流港
+			<li>功能说明</li>
+			<li>常见问题</li>
+			<li>查找信息</li>
+			<li>联系我们</li>
+			
+		</ul>
+		<ul>信息站
+			<li>申请流程</li>
+			<li>我要加入</li>
+			<li>资质认证</li>
+			<li>信息发布</li>
+		</ul>
+		<ul>服务中心
+			<li>售后政策</li>
+			<li>价格保护</li>
+			<li>联系客服</li>
+		</ul>
+	
+</div>
+<div class="view">
+	<div class="logobottom">
+		<p><span>城乡商贸城</span>丨<span>法律声明</span>丨<span>用户协议</span>丨<span>隐私安全</span>丨<span>友情链接</span>丨<span>投诉建议</span>丨<span>联系我们</span></p>
+		<br>
+		<p><span>豫ICP备13021607号-17</span><span> ****备案</span><span>合作热线：0371-56087190</span></p>
+		<br>
+		<p><span>&copy;2015</span><span>郑州市康途计算机科技有限公司</span><span>版权所有</span></p>
+	</div>
+</div>
 </body>
 </html>
