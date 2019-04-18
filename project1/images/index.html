@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑"
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background:#ebebeb;
+			overflow: hidden;
+		}
+		.header{
+			height: 67px;
+			background:#2c84ff;
+			width: 100%;
+		}
+		.nav{
+			position: absolute;
+			top: 67px;
+			left: 0;
+			bottom: 0;
+			background:#333d4b;
+			width: 265px;
+			overflow: auto;
+		}
+		.content{
+			position: absolute;
+			left:275px;
+			top: 77px;
+			bottom: 10px;
+			right: 10px;
+			background:white;
+			padding: 10px;
+			overflow: auto;
+			display: none;
+		}
+		.nav li:hover .content{
+			display: block;
+		}
+		.header p{
+			float: left;
+			font-size: 16px;
+			color: #deffff;
+			line-height: 67px;
+			font-weight: 700;
+			margin-left: 38px;
+			margin-right: 116px;
+		}
+		.header_img1{
+			float: left;
+			margin-top: 22px;
+		}
+		.header h3{
+			float: left;
+			color: #ffffff;
+			line-height: 67px;
+			font-size: 22px;
+			margin-left: 46px;
+		}
+		.header_img2{
+			float: right;
+			margin: 22px 29px 0 29px;
+		}
+		.time{
+			border-left: 1px solid #4a96ff;	
+			border-right: 1px solid #4a96ff;	
+			float: right;
+			height: 67px;
+			width: 230px;
+			padding: 0 20px;
+			text-align:center;
+			line-height: 67px;
+		}
+		.time img{
+			vertical-align: middle;
+		}
+		.time span{
+			vertical-align: middle;
+			color: #deffff;
+			font-size: 14px;
+		}
+		.login{
+			float: right;
+			height: 67px;
+			line-height:67px;
+			color: #deffff;
+			margin-right: 36px;
+			position: relative;
+			top: 0;
+			left:0;
+		}
+		.login img{
+			vertical-align: middle;
+		}
+		.login span{
+			vertical-align: middle;
+			font-size: 14px;
+			font-weight:700;
+		}
+		.angle{
+			height: 0;
+			width: 0;
+			border:7px solid transparent;
+			border-bottom-color: white;
+			margin-left:137px;
+			position: relative;
+			top: 1px;
+		}
+		.login_box1{
+			width: 160px;
+			height: 82px;
+			background-color: white;
+			border-radius:5px;
+			border:1px solid #b4b4b4;
+		}
+		.login_box{
+			height: 98px;
+			width: 162px;
+			position: absolute;
+			top: 56px;
+			left:-37px;
+			z-index: 2;
+			display: none;
+		}
+		.login:hover .login_box{
+			display: block;
+		}
+		.login_box a:hover{
+			background:#007ab8;
+			color: white;
+		}
+		.password a{
+			display: block;
+			height: 26px;
+			line-height:26px;
+			font-size: 14px;
+			color: 333333;
+			text-indent: 20px;
+			margin-top: 5px;
+			margin-bottom: 9px;
+		}
+		._158line{
+			height: 1px;
+			background:#e5e5e5;
+		}
+		.outlogin a{
+			display: block;
+			height: 26px;
+			line-height:26px;
+			color: 333333;
+			font-size: 14px;
+			text-indent: 20px;
+			margin-top: 6px;
+			margin-bottom: 15px;
+		}
+		.file ._fileimg1{
+			float: left;
+			margin-left: 20px;
+			margin-right: 6px;
+			margin-top: 13px;
+		}
+		.file ._fileimg2{
+			float: right;
+			margin-top: 16px;
+			margin-right: 20px;
+			display: none;
+		}
+		.file ._fileimg3{
+			float: right;
+			margin-top: 16px;
+			margin-right: 20px;
+			
+		}
+		.file h3{
+			float: left;
+			font-size:15px;
+			color: #e7ebf0;
+		}
+		.clear{
+			clear: both;
+		}
+		.file{
+			height: 46px;
+			line-height:46px;
+		}
+		.list{
+			text-indent: 48px;
+			font-size:15px;
+			color: #e7ebf0;
+			display: none;
+		}
+		.list li{
+			line-height: 19px;
+			padding: 13px 0;
+			height: 19px;
+		}
+		.menu:hover .list{
+			display: block;
+		}
+		.list li:hover{
+			background:#3d4755;
+		}
+		.menu:hover ._fileimg2{
+			display: block;
+		}
+		.menu:hover ._fileimg3{
+			display: none;
+		}
+		.line1box{
+			background:#e9e9e9;
+			width: 116px;
+			height: 34px;
+			text-align: center;
+			float: left;
+			margin-right: 10px;
+		}
+		.line1box span{
+			display: inline-block;
+			color: #686767;
+			font-size: 14px;
+			vertical-align: middle;
+			line-height:34px;
+		}
+		.line1box a{
+			display: inline-block;
+			vertical-align: middle;
+			font-size:18px;
+			line-height:18px;
+			height: 18px;
+			width: 18px;
+			background:#b4b4b4;
+			color: white;
+			margin-left: 10px;
+		}
+		.line1box2{
+			background:#919191;
+		}
+		.line1box2 span{
+			color: white;
+		}
+		.line1box2 a{
+			color: #b4b4b4;
+			background:white;
+		}
+		.content_line1{
+			overflow: hidden;
+		}
+		.content .demand{
+			font-size:18px;
+			margin-top: 20px;
+			color: #333333;
+		}
+		.content form{
+			background:#e5e5e5;
+			height: 34px;
+			padding: 8px 0;
+		}
+		.form_{
+			position: relative;
+			left:0;
+			top: 0;
+			float: left;
+			margin-left: 10px;
+		}
+		.form_ span{
+			font-size:13px;
+			color: #333333;
+			position: absolute;
+			left:12px;
+			top:9px;
+		}
+		.form_ input{
+			height: 32px;
+			width: 171px;
+			border:1px solid #cccccc;
+			text-indent:72px;
+			border-radius: 5px;
+		}
+		.form_2{
+			width: 90px;
+			height: 32px;
+			border:1px solid #5076ac;
+			color: white;
+			background-color: #5076ac;
+			margin-left: 10px;
+			border-radius: 5px;
+		}
+		.form_3 input{
+			width: 245px;
+		}
+		.line2box{
+			width: 112px;
+			height: 34px;
+			background:#2c84ff;
+			color: white;
+			text-align:center;
+			border-radius: 5px;
+			float: left;
+			margin-right: 10px;
+		}
+		.line2box img{
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+		.line2box a{
+			vertical-align: middle;
+			font-size: 16px;
+			height: 34px;
+			line-height:34px;
+			color:white;
+		}
+		.line2box2{
+			background:#4fc61a;
+		}
+		.line2box3{
+			background:#ff8314;
+		}
+		.content_line2{
+			margin:15px 0;
+		}
+		table{
+			width: 100%;
+			border-collapse: collapse;
+			font-size:14px;
+			color: #333333;
+		}
+		th{
+			background: #ececec;
+		}
+		td,th{
+			border:1px solid #dddddd;
+			height: 36px;
+			text-align:center;
+		}
+		.line3box{
+			height: 32px;
+			border:1px solid #d3d3d3;
+			text-align:center;
+			line-height:32px;
+			color: #999999;
+			float: left;
+			margin:0 4px;
+		}
+		.line3box1{
+			width: 52px;
+		}
+		.line3box2{
+			width: 66px;
+		}
+		.line3box3{
+			width: 32px;
+		}
+		.line3box4{
+			width: 40px;
+		}
+		.content_line3 p{
+			float: left;
+			line-height: 32px;
+			height: 32px;
+			color: #333333;
+			font-size:14px;
+		}
+		.content_line3{
+			width: 718px;
+			margin:20px auto 0 auto; 
+		}
+</style>
+</head>
+<body>
+	<div class="header">
+		<p>系统导航</p>
+		<img src="images/test_03.png" alt="" class="header_img1">
+		<h3>航空电子商务结算系统</h3>
+		<img src="images/test_11.png" alt="" class="header_img2">
+		<div class="time">
+			<img src="images/test_09.png" alt="">
+			<span>登陆时间:2019-4-17 11:19</span>
+		</div>
+		<div class="login">
+			<img src="images/test_05.png" alt="">
+			<span>Dropdown</span>
+			<img src="images/test_07.png" alt="">
+			<div class="login_box">
+				<div class="angle"></div>
+				<div class="login_box1">
+					<div class="password"><a href="">修改密码</a></div>
+					<div class="_158line"></div>
+					<div class="outlogin"><a href="">退出登录</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<div class="file">
+				<img src="images/test_19.png" alt="" class="_fileimg1">
+				<h3>主文件</h3>
+				<img src="images/test_22.png" alt="" class="_fileimg2">
+				<img src="images/test_37.png" alt="" class="_fileimg3">
+				<div class="clear"></div>
+			</div>
+			<ul class="list">
+				<li>银行信息</li>
+				<li>银行账号信息</li>
+				<li>差异原因代码信息</li>
+				<li>差异处理行动代码信息</li>
+				<li>支付通道提供商信息</li>
+				<li>支付通道(商户号)信息</li>
+				<li>销售渠道信息</li>
+				<li>支付平台业务类型信息</li>
+				<li>供应商信息</li>
+				<li>附加产品信息</li>
+				<li>货币代码信息</li>
+				<li>汇率信息</li>
+				<li>拒付原因信息</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content_line1">
+			<div class="line1box"><span>欢迎使用</span><a href="">&times;</a></div>
+			<div class="line1box line1box2"><span>银行信息</span><a href="">&times;</a></div>
+		</div>
+		<h3 class="demand">银行信息查询</h3>
+		<form action="">
+			<div class="form_ form_1">
+				<input type="text">
+				<span>银行代码:</span>
+			</div>
+			<div class="form_ form_1">
+				<input type="text">
+				<span>银行简称:</span>
+			</div>
+			<div class="form_ form_3">
+				<input type="text">
+				<span>银行名称:</span>
+			</div>
+			<input type="submit" value="查询" class="form_2">
+			<div class="clear"></div>
+		</form>
+		<div class="content_line2">
+			<div class="line2box line2box1"><a href=""><img src="images/test_27.png" alt="">添加</a></div>
+			<div class="line2box line2box2"><a href=""><img src="images/test_29.png" alt="">编辑</a></div>
+			<div class="line2box line2box3"><a href=""><img src="images/test_31.png" alt="">删除</a></div>
+			<div class="clear"></div>
+		</div>
+		<table>
+			<tr>
+				<th>银行代码</th>
+				<th>银行简称</th>
+				<th>银行名称</th>
+				<th>创建ID</th>
+				<th>创建日期</th>
+				<th>创建时间</th>
+				<th>修改ID</th>
+				<th>修改日期</th>
+				<th>修改时间</th>
+			</tr>
+			<tr>
+				<td>BOC</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>ABC</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>CAB</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>DCV</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>EFS</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>FAS</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>GEB</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>HAB</td>
+				<td>工行</td>
+				<td>中国工商银行</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>09:38:58</td>
+				<td>liuyangfu</td>
+				<td>2013-12-06</td>
+				<td>8</td>
+			</tr>
+		</table>
+		<div class="content_line3">
+			<div class="line3box line3box1">首页</div>
+			<div class="line3box line3box2">上一页</div>
+			<div class="line3box line3box3">1</div>
+			<div class="line3box line3box3">2</div>
+			<div class="line3box line3box3">3</div>
+			<p>&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;</p>
+			<div class="line3box line3box4">10</div>
+			<div class="line3box line3box2">下一页</div>
+			<div class="line3box line3box1">尾页</div>
+			<p>共80条记录 到第</p>
+			<div class="line3box line3box4">1</div>
+			<p>页</p>
+			<div class="line3box line3box1">跳转</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+</html>
