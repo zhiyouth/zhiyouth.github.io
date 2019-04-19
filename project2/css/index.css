@@ -1,0 +1,402 @@
+*{
+	margin: 0;
+	padding:0;
+	font-family: "微软雅黑"
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.safe{
+	width: 1080px;
+	margin:0 auto;
+}
+.clear{
+	clear: both;
+}
+.logo{
+	margin-top:28px;
+}
+.logo>img{
+	float: left;
+}
+.search{
+	float: right;
+	margin-top: 2px;
+}
+.input_1{
+	text-indent: 10px;
+	height: 14px;
+	font-size: 14px;
+	padding: 12px 0;
+	width: 422px;
+	color: #757575;
+	float: left;
+	border:1px solid #cccccc;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	outline: none;
+}
+.input_2{
+	width: 40px;
+	height: 40px;
+	border:1px solid #cccccc;
+	border-left: none;
+	float: left;
+	background:url(../images/index01.png);
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	outline: none;
+}
+.search form{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.search_1 img{
+	position: absolute;
+	top: 0;
+	left:0;
+}
+.search p{
+	font-size: 12px;
+	margin-top: 10px;
+}
+.search span:hover{
+	color: #f7b200;
+}
+.search p span{
+	color: #666;
+	margin-right: 6px;
+}
+.nav{
+	margin-top: 18px;
+}
+.hover_1 span:hover{
+	color: #6744ac;
+}
+.nav span,.nav .line1{
+	margin-right: 50px;
+	height: 19px;
+	float: left;
+	color: #333333;
+}
+.nav a{
+	display: block;
+	float: left;
+}
+.nav .line1{
+	height: 16px;
+	background-color: #bbbbbb;
+	width: 1px;
+}
+.blank{
+	height: 35px;
+	background:url(../images/bg2.png);
+}
+.readme{
+	position: relative;
+	left:0;
+	top: 0;
+	float: left;
+}
+.readme:hover>span{
+	color: #6744ac;
+}
+.readme:hover .hidden_1{
+	display: block;
+}
+.hidden_1{
+	position: absolute;
+	top:0;
+	left:-82px;
+	display: none;
+}
+.hidden_1box{
+	padding: 30px 40px 22px 40px;
+	width: 145px;
+	height: 215px;
+	border:1px solid #e8e8e8;
+	background-color: white;
+}
+.hidden_1 .hidden_1img1{
+	position: relative;
+	top: 1px;
+	left:0;
+	margin-left: 105px;
+	margin-top: 22px;
+	display: block;
+}
+.hidden_1 .hidden_1img2{
+	width: 145px;
+	height: 133px;
+}
+.hidden_1box span{
+	font-size:16px;
+	color: #666666;
+	margin-right: 0px;
+	margin-top: 17px;
+}
+.safe .safe_line1{
+	font-size:12px;
+	color: #666;
+}
+.safe .safe_line2{
+	height: 462px;
+	margin-top: 21px;
+}
+.sL2img1{
+	width: 460px;
+	height: 460px;
+	border:1px solid #cccccc;
+	float: left;
+	margin-right: 18px;
+}
+.sL2box1{
+	float: left;
+	margin-right: 52px
+}
+.sL2box1 div:hover{
+	border:1px solid #523669;
+}
+.sL2box1 div{
+	background:url(../images/bg.png) no-repeat 0 0;
+	width: 80px;
+	height: 80px;
+	margin-top: 13px;
+	border:1px solid #cccccc;
+}
+.sL2box1 .sL2box11{
+	margin-top: 0px;
+}
+.sL2box1 .sL2box12{
+	background-position:-80px 0;
+}
+.sL2box1 .sL2box13{
+	background-position:-320px 0;
+}
+.sL2box1 .sL2box14{
+	background-position:-240px 0;
+}
+.sL2box1 .sL2box15{
+	background-position:-160px 0;
+}
+.sL2box2{
+	float: left;
+	width: 466px;
+}
+.sL2box2 h3{
+	color: #333333;
+	font-size: 20px;
+	font-weight: 400;
+}
+.sL2box2 h4{
+	color: #999999;
+	font-size: 13px;
+	font-weight: 400;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.sL2box2>p{
+	color: #bf9e6b;
+	font-size:12px;
+	height: 24px;
+	width: 116px;
+	border-radius: 1px;
+	background:#f7f1e8;
+	line-height: 24px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.sL2box2line{
+	height: 1px;
+	background-color: #cccccc;
+	width: 100%;
+}
+.sL2box2 span{
+	color: #666;
+	font-size:13px;
+}
+.price{
+	font-size:26px;
+	color: #f85453;
+	margin-top: 13px;
+	margin-bottom: 15px;
+}
+.price .pricespan1{
+	font-size:15px;
+	color: #f85453;
+	margin-left: 30px;
+
+}
+.price .pricespan2{
+	margin-left: 45px;
+}
+.color span,.size span{
+	float: left;
+	margin-top: 9px;
+	margin-right: 38px;
+}
+.color p button{
+	height: 35px;
+	width: 74px;
+	text-align:center;
+	font-size:13px;
+	display: block;
+	margin-bottom: 10px;
+	background-color: white;
+	outline: none;
+	border:none;
+	border:1px solid #52346a;
+}
+.color p{
+	height: 35px;
+	line-height: 35px;
+	position: relative;
+	top: 0;
+	left:0;
+	float: left;
+	background-color: red
+}
+.color p img{
+	position: absolute;
+	right:0;
+	bottom: 0;
+}
+.size{
+	margin-top: 15px;
+}
+.size p{
+	width: 67px;
+	height: 35px;
+	text-align:center;
+	line-height: 35px;
+	font-size:13px;
+	float: left;
+	margin-right:5px;
+	position: relative;
+	top: 0;
+	left:0;
+}
+.size p button{
+	margin-top: 0;
+	display: block;
+	width: 67px;
+	height: 35px;
+	background-color: white;
+	border:1px solid #52346a;
+	outline: none;
+}
+.size p img{
+	position: absolute;
+	right:0;
+	bottom: 0;}
+.buynow input{
+	width:180px;
+	height:40px;
+	background-color: #523669;
+	color: white;
+	text-align:center;
+	line-height: 40px;
+	outline: none;
+	border:none;
+}
+.buynow{
+	width:180px;
+	height:40px;
+	position: relative;
+	left:0;
+	top: 0;
+	margin-left: 64px;
+	margin-top: 35px;
+}
+.hidden2{
+	position: absolute;
+	left: -18px;
+	top:  -230px;
+	display: none;
+}
+.hidden2box{
+	padding: 31px 47px 25px 47px;
+	width: 129px;
+	background-color: white;
+	border:1px solid #f3f3f3;
+}
+.hidden2box img{
+	width: 129px;
+	height: 116px;
+	display: block;
+	margin-bottom: 23px;
+}
+.size .sizebutton2 button{
+	border:1px solid #cccccc;
+}
+.size .sizebutton2 img{
+	display: none
+}
+.size .sizebutton2:hover img{
+	display: block;
+}
+.size .sizebutton2:hover button{
+	border-color: #52346a; 
+}
+.hidden2box p{
+	color: #666;
+	font-size:16px;
+}
+.hidden2>img{
+	margin-left: 100px;
+}
+.buynow:hover .hidden2{
+	display: block;
+}
+.safe_line3{
+	margin-top: 20px;
+}
+.safe_line3 .sL3box1{
+	background:url(../images/index03.png) no-repeat;
+	font-size:12px;
+	color: #333333;
+	text-indent: 20px;
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	margin-right: 10px;
+}
+.sL3box1 .hidden3{
+	position: absolute;
+	top: 0px;
+	left:-55px;
+	width: 260px;
+	display: none;
+}
+.hidden3box{
+	margin-top: 15px;
+	margin-left: 15px;
+}
+.sL3box1:hover .hidden3{
+	display: block;
+}
+.hidden3box img{
+	display: block;
+	margin-left: 72px;
+	margin-top: 5px;
+	z-index: 2;
+	position: relative;
+	left:0;
+	top: 1px;
+}
+.hidden3box p{
+	width: 230px;
+	font-size: 12px;
+	color: #666666;
+	background-color: white;
+	line-height:27px;
+	text-indent: 0;
+	border:1px solid #f3f3f3;
+	padding: 5px 15px 10px 15px;
+}
