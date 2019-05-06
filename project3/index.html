@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑"
+		}
+		a{
+			text-decoration:none;
+			color:black;
+		}
+		body{
+			background: #f0f0f0;
+		}
+		#product{
+			width: 1260px;
+			margin:0 auto;
+			border:2px solid #d70c19;
+			position: relative;
+		}
+		li{
+			list-style: none;
+			margin:8px;
+			width: 236px;
+			float: left;
+			background: white;
+			position: absolute;
+		}
+		li img{
+			display: block;
+		}
+		li p{
+			font-size:12px;
+			/*padding:0 19px 0 15px;*/
+			color: #525252;
+			margin: 11px 19px 13px 15px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="product">
+
+	
+	</ul>
+</body>
+<script src="homework.js"></script>
+<script>
+var product=document.getElementById('product');
+var arr=[{col:0,h:0},{col:1,h:0},{col:2,h:0},{col:3,h:0},{col:4,h:0}];
+
+for(i=0;i<data.length;i++){
+
+	// find the min.h of arr 
+	arr.sort(function(a,b){
+		if(a.h>b.h){
+			return 1;
+		}else{
+			return -1;
+		}
+	})
+	// console.log(arr)
+	var li=document.createElement("li");
+	var img=document.createElement("img")
+	img.src=data[i].img_url;
+	var p=document.createElement("p");
+	p.innerHTML=data[i].title;
+
+	li.style.left=(arr[0].col)*252+"px";
+	li.style.top=arr[0].h+"px";
+
+	product.appendChild(li);
+	li.appendChild(img);
+	li.appendChild(p);
+	var he=0;
+	if(p.currentStyle){
+		he=p.currentStyle.height
+	}else{
+		he=getComputedStyle(p,null).height
+	}
+	// console.log(he)
+	arr[0].h+=Number(data[i].img_url.split("?")[1].split("x")[1])+16+parseInt(he)+24;//16为li的margin  24为p的margin
+}
+	arr.sort(function(a,b){
+		if(a.h>b.h){
+			return 1;
+		}else{
+			return -1;
+		}
+	})
+	product.style.height=arr[arr.length-1].h+"px"
+
+</script>
+</html>
