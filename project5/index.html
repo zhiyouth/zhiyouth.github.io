@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#view{
+			margin:200px 0 0 200px;
+			width: 320px;
+			height: 426px;
+			position: relative;
+		}
+		#small{
+			width: 100%;
+		}
+		#box{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 320px;
+			height: 426px;
+			overflow: hidden;
+			display: none;
+			/*border:1px solid black;*/
+		}
+		#big{
+			position: absolute;
+			width: 640px;
+			height: 852px;
+			left:0;
+			top:0;
+			cursor: crosshair;
+		}
+	</style>
+</head>
+<body>
+	<div id="view">
+		<img src="a.jpeg" alt="" id="small">
+		<div id="box">
+			<img src="a.jpeg" alt="" id="big">
+		</div>
+	</div>
+</body>
+<script>
+var view=document.getElementById('view');
+var small=document.getElementById('small');
+var big=document.getElementById('big');
+var box=document.getElementById('box');
+small.onmouseover=function(e){
+	box.style.display="block"
+}
+box.onmouseout=function(e){
+	box.style.display="none"
+}
+big.onmousemove=function(e){
+	var x=e.clientX-200;
+	var y=e.clientY-200;
+	if(x<80){x=80};if(x>240){x=240};
+	if(y<106.5){y=106.5};if(y>319.5){y=319.5};
+	big.style.left=-2*x+160+"px";
+	big.style.top=-2*y+213+"px"
+}
+
+
+
+</script>
+</html>
