@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		font-family: "微软雅黑"
+	}
+	#top{
+		background: #f5f5f5;
+		height: 40px;
+	}
+	#content{
+		width: 1200px;
+		margin:0 auto;
+	}
+	#City{
+		margin-left: 15px;
+		font-size:15px;
+		color:#d70c19;
+		line-height: 40px;
+	}
+	#Area,#tab{
+		font-size: 12px;
+		color: #666666;
+		line-height: 40px;
+		margin:0 0 0 6px;
+	}
+	#tab:hover{
+		cursor:pointer;
+		color:#d70c19;
+	}
+	#cover{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.5);
+		display: none;
+	}
+	#myhome{
+		width: 816px;
+		background: white;
+		margin:63px auto 0;
+		border-radius: 5px;
+		padding: 35px 42px;
+		position: relative;
+	}
+	#trunOff{
+		position: absolute;
+		right: 8px;
+		top: 0px;
+		text-align: center;
+		line-height: 35px;
+		font-size: 35px;
+		color: #aaaaaa;
+		cursor: pointer;
+	}
+	.wordColor{
+		color: #005fc5
+	}
+	#title{
+		font-size: 20.5px;
+	}
+	#line{
+		height: 1px;
+		background:#cdcdcd;
+		margin-top: 12px;
+	}
+	#pro,#city,#area{
+		overflow:hidden;
+	}
+	#pro>p{
+		float: left;
+		font-size: 18px;
+		margin:36px 18px 0 2px;
+	}
+	#city>p{
+		float: left;
+		font-size: 18px;
+		margin:14px 18px 0 2px;
+	}
+	#area>p{
+		float: left;
+		font-size: 18px;
+		margin:14px 18px 0 2px;
+	}
+	#pro>div{
+		overflow: hidden;
+		float: left;
+		width: 710px;
+		margin-top:40px;
+	}
+	#city>div{
+		overflow: hidden;
+		float: left;
+		width: 710px;
+		margin-top:18px;
+	}
+	#area>div{
+		overflow: hidden;
+		float: left;
+		width: 710px;
+		margin-top:18px;
+	}
+	#pro .wordColor{
+		color: #005fc5
+	}
+	#city .wordColor{
+		color: #005fc5
+	}
+	#area .wordColor{
+		color: #005fc5
+	}
+	#pro div>p{
+		color: #424242;
+		margin-right: 20px;
+		float: left;
+		font-size: 14px;
+		margin-bottom: 12px;
+		cursor: pointer;
+	}
+	#city div>p{
+		color: #424242;
+		margin-right: 20px;
+		float: left;
+		font-size: 14px;
+		margin-bottom: 12px;
+		cursor: pointer;
+	}
+	#area div>p{
+		color: #424242;
+		margin-right: 20px;
+		float: left;
+		font-size: 14px;
+		margin-bottom: 12px;
+		cursor: pointer;
+	}
+	#area{
+		display: none;
+	}
+	#btn{
+		width: 180px;
+		height: 36px;
+		line-height: 36px;
+		background: #d70c19;
+		color:white;
+		font-size: 18px;
+		letter-spacing: 12px;
+		text-align: center;
+		text-indent: 12px;
+		outline: 0;
+		border:1px solid #d70c19;
+		margin:25px 0 0 315px;
+		border-radius:5px;
+		display: none;
+		cursor: pointer;
+	}
+</style>
+<body>
+	<div id="top">
+		<div id="content">
+			<span id="City">郑州市</span>
+			<span id="Area">中原区</span>
+			<span id="tab">[切换]</span>
+		</div>
+	</div>
+	<div id="cover">
+		<div id="myhome">
+			<p class="wordColor" id="title">县域商城，一键直达；本地企业，最近服务；同城保障，放心消费！</p>
+			<div id="line"></div>
+			<div id="trunOff">&times;</div>
+			<div id="cover_content">
+				<div id="pro">
+					<p class="wordColor">省份:</p>
+					<div></div>
+				</div>
+				<div id="city">
+					<p class="wordColor">市域:</p>
+					<div></div>
+				</div>
+				<div id="area">
+					<p class="wordColor">县区:</p>
+					<div></div>
+				</div>
+				<button id="btn">切换</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="area.js"></script>
+<script>
+var tab=document.getElementById('tab');
+var City=document.getElementById('City');
+var Area=document.getElementById('Area');
+var myhome=document.getElementById('myhome');
+var cover=document.getElementById('cover');
+var turnOff=document.getElementById('turnOff');
+var pro=document.getElementById('pro');
+var btn=document.getElementById('btn');
+var mypro_div=pro.getElementsByTagName('div')[0];
+var pro_div_p=mypro_div.getElementsByTagName('p');
+var city=document.getElementById('city');
+var mycity_div=city.getElementsByTagName('div')[0];
+var city_div_p=mycity_div.getElementsByTagName('p');
+var area=document.getElementById('area');
+var myarea_div=area.getElementsByTagName('div')[0];
+var area_div_p=myarea_div.getElementsByTagName('p');
+var citycount;
+var procount;
+var areacount;
+tab.onclick=function(){
+
+
+
+
+
+
+
+
+
+
+	..
+
+	cover.style.display="block"
+
+}
+trunOff.onclick=function(){
+	cover.style.display="none"
+}
+cover.onmouseout=function(){
+	cover.onclick=function off(){
+		cover.style.display="none"
+	}
+}
+myhome.onmouseover=function(){
+	cover.onclick=null
+}
+//省
+procount=-1;
+for(var x in data){
+		procount++;
+		var myp=document.createElement("p");
+		myp.innerHTML=x;
+		myp.proOn=procount;
+		mypro_div.appendChild(myp);
+}
+
+//市
+function upCity(){
+	mycity_div.innerHTML=""
+	citycount=-1
+	for(var x  in data[pro_div_p[procount].innerHTML][0]){
+		citycount++;
+		var myp=document.createElement("p");
+		myp.cityOn=citycount;
+		myp.innerHTML=x; 
+		mycity_div.appendChild(myp);
+	}
+	citycount=0
+}
+upCity()
+// city.onclick=function(){
+// console.log()}
+//区
+pro.onclick=function(e){
+	if(e.target.nodeName=="P"){
+		pro_div_p[procount].className="";
+		procount=e.target.proOn
+		e.target.className="wordColor"
+		area.style.display="none"
+	}
+	upCity()
+}	
+city.onclick=function(e){
+	if(e.target.nodeName=="P"){
+		city_div_p[citycount].className="";
+		citycount=e.target.cityOn
+		e.target.className="wordColor"
+		area.style.display="block"
+		upArea()
+	}
+}
+
+function upArea(){
+	myarea_div.innerHTML=""
+	areacount=-1
+	for(var i=0;i<data[pro_div_p[procount].innerHTML][0][city_div_p[citycount].innerHTML].length;i++){
+		for(var x in data[pro_div_p[procount].innerHTML][0][city_div_p[citycount].innerHTML][i]){
+			areacount++
+			var myp=document.createElement("p");
+			myp.innerHTML=x;
+			myp.areaOn=areacount;
+			myarea_div.appendChild(myp);
+		}
+		
+	}
+	areacount=0
+}
+
+upArea()
+area.onclick=function(e){
+	if(e.target.nodeName=="P"){
+		area_div_p[areacount].className="";
+		areacount=e.target.areaOn
+		e.target.className="wordColor"
+		btn.style.display="block"
+	}
+}
+
+btn.onclick=function(){
+	cover.style.display="none"
+	City.innerHTML=city_div_p[citycount].innerHTML;
+	Area.innerHTML=area_div_p[areacount].innerHTML;
+}
+</script>
+</html>
