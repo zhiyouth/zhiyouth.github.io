@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#view{
+			margin:0 auto;
+			width: 600px;
+		}
+		#header{
+			width: 580px;
+			height: 200px;
+			background: #dedede;
+			font-size: 50px;
+			margin:8px;
+			text-align: center;
+			color: purple;
+			line-height: 200px;
+		}
+		#start,#end{
+			width: 280px;
+			height: 80px;
+			background: orange;
+			font-size: 30px;
+			text-indent: 2em;
+			line-height: 80px;
+			letter-spacing: 2em;
+			margin:8px;
+			outline: 0;
+			border:0;	
+			cursor: pointer;
+			color: white;
+		}
+		#nameList{
+			background: #999;
+			width: 520px;
+			height: 300px;
+			padding: 30px;
+			font-size: 20px;
+			margin:10px;
+		}
+		#view .con{
+			background: #dedede;
+		}
+	</style>
+</head>
+<body>
+	<div id="view">
+		<div id="header">抽奖</div>
+		<button id="start">开始</button>
+		<button id="end">结束</button>
+		<div id="nameList">
+			获奖名单:
+		</div>
+	</div>
+</body>
+<script src="name.js"></script>
+<script>
+var header=document.getElementById('header');
+var start=document.getElementById('start');
+var end=document.getElementById('end');
+var nameList=document.getElementById('nameList');
+var count,ran,flagEnd,num,namebox;
+var flag=true;
+var allowName=["唐浩","Veblen"];
+var clicknum=0;
+function Ran(){
+	ran=Math.floor(Math.random()*arr.length)
+	if(count==ran){
+		Ran()
+	}else{
+		count=ran
+	}
+}
+start.onclick=function(){
+	
+	if(flag){
+		clicknum++;
+		flag=false;
+		flagEnd=true;
+		var t=200;
+		num=Math.floor(Math.random()*2);
+		function fun(){
+			Ran()
+			header.innerHTML=arr[ran];
+			
+			// console.log(header.innerHTML);
+			if(flagEnd){
+				if(t>50){//加速
+					t-=20
+				}
+			}else{
+				if(t<500){
+					t+=25
+				}
+			}
+			// console.log(arr[ran])
+			if(t>500){
+				var node=document.createElement("p");
+				node.innerHTML=allowName[num];
+				header.innerHTML=allowName[num];
+				nameList.appendChild(node)
+			}else{
+				setTimeout(fun,t)
+			}
+
+		}
+		fun()
+	}
+	
+	if(clicknum==3){
+		start.className="con"
+	}
+}
+end.onclick=function(){
+	if(clicknum<3){
+		flag=true;
+	}
+	flagEnd=false;
+}
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#view{
+			width: 1200px;
+			margin:0 auto;
+		}
+		#view div{
+			height: 1000px;
+			font-size: 50px;
+		}
+		#nav{
+			position: fixed;
+			width: 50px;
+			background: cyan;
+			top:200px;
+			left: 50px;
+		}
+		#nav div{
+			width: 46px;
+			height: 46px;
+			margin:2px;
+			font-size: 30px;
+			line-height: 46px;
+			text-align: center;
+			background: pink;
+		}
+		#nav .col{
+			background: purple;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="view">
+		<div style="background: red">1</div>
+		<div style="background: orange">2</div>
+		<div style="background: blue">3</div>
+		<div style="background: green">4</div>
+	</div>
+	<div id="nav">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+<script>
+var view=document.getElementById('view');
+var nav=document.getElementById('nav');
+var count=0;
+var num;
+nav.children[0].className="col"
+for(var i=0;i<nav.children.length;i++){
+	nav.children[i].index=i
+	nav.children[i].onclick=function(){
+		nav.children[count].className=""
+		this.className="col"
+		count=this.index;
+		document.documentElement.scrollTop=view.children[this.index].offsetTop;
+	}
+
+}
+window.onscroll=function(){
+
+	var H=window.innerHeight;
+	var scrollTop=document.documentElement.scrollTop;
+
+	for(var i=view.children.length-1;i>=0;i--){
+		var offsetTop=view.children[i].offsetTop;
+
+		if(num!=i&&offsetTop<scrollTop+H/3){
+
+				num=i;
+
+			for(var j=0;j<nav.children.length;j++){
+				nav.children[j].className=""
+				nav.children[i].className="col"
+
+			}
+			console.log(num)
+			
+		}
+
+		if(offsetTop<scrollTop+H/3){
+			
+			break;
+		}
+	}
+
+}
+</script>
+</html>
