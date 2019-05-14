@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑";
+		}
+		a{
+			text-decoration:none;
+			color:black;
+		}
+		li{
+			list-style:none;
+		}
+		body{
+			background: #f9f9f9;
+		}
+		#view{
+			width: 1100px;
+			margin:0 auto;
+		}
+		#view div>p{
+			font-size: 24px;
+			color: #333;
+			text-align: center;
+			margin:30px 0 10px 0;
+		}
+		#view div ul{
+			overflow: hidden;
+		}
+		#view div ul li{
+			margin:10px;
+			float: left;
+			width: 255px;
+			background: white;
+		}
+		#view div ul li img{
+			width: 255px;
+		}
+		#nav{
+			position: fixed;
+			left: 100px;
+			top: 100px;
+			background: cyan;
+		}
+		#nav div{
+			width: 68px;
+			height: 68px;
+			margin:1px;
+			background: pink;
+			text-align: center;
+			color: #333;
+			line-height: 68px;
+			font-size: 14px;
+		}
+		#nav .col{
+			background: purple;
+			color:white;
+		}
+		#view img{
+			width: 255px;
+			height: 255px;
+			background:url(lazyload.gif) no-repeat center center; 
+		}
+	</style>
+</head>
+<body>
+	<!-- 24px #333 -->
+	<div id="view">
+	
+	</div>
+	<div id="nav">
+	
+	</div>
+	<!-- 20 20 15 20 -->
+</body>
+<script src="data.js"></script>
+<script>
+var view=document.getElementById('view');
+var nav=document.getElementById('nav');
+var imgs=view.getElementsByTagName('img');
+
+for(var i=0;i<data.length;i++){
+
+	var bigbox=document.createElement("div");
+	var myp=document.createElement("p");
+	var myul=document.createElement("ul");
+	myp.innerHTML=data[i].type;
+	view.appendChild(bigbox);
+	bigbox.appendChild(myp);
+	bigbox.appendChild(myul);
+
+	var nav_box=document.createElement("div")
+	nav_box.innerHTML=data[i].type;
+	nav.appendChild(nav_box);
+	for(var j=0;j<data[i].goodList.length;j++){
+
+		var myli=document.createElement("li");
+		var li_img=document.createElement("img");
+		var li_p1=document.createElement("p");
+		li_p1.innerHTML=data[i].goodList[j].store;
+		li_p1.style.color="#bf9e6b";
+		li_p1.style.fontSize="12px";
+		li_p1.style.margin="20px 0 10px 20px";
+		var li_p2=document.createElement("p");
+		li_p2.innerHTML=data[i].goodList[j].title;
+		li_p2.style.color="#4a4a4a";
+		li_p2.style.fontSize="13px";
+		li_p2.style.marginLeft="20px";
+		var li_div=document.createElement("div");
+		li_div.style.margin="11px 0 10px 20px";
+		li_div.style.overflow="hidden";
+		var li_div_span=document.createElement("span");
+		li_div_span.innerHTML="￥"+data[i].goodList[j].price;
+		li_div_span.style.color="#f7a701";
+		li_div_span.style.fontSize="18px";
+		li_div_span.style.float="left";
+		var li_div_div=document.createElement("div");
+		li_div_div.innerHTML="一起拼";
+		li_div_div.style.color="#fb4c81";
+		li_div_div.style.width="40px";
+		li_div_div.style.float="left";
+		li_div_div.style.height="16px";
+		li_div_div.style.fontSize="12px";
+		li_div_div.style.lineHeight="16px";
+		li_div_div.style.textAlign="center";
+		li_div_div.style.border="1px solid #fb4c81";
+		li_div_div.style.margin="3px 0 0 11px";
+		var li_p3=document.createElement("p");
+		li_p3.innerHTML=data[i].goodList[j].nice+"条好评";
+		li_p3.style.color="#bbbbbb";
+		li_p3.style.fontSize="11px";
+		li_p3.style.margin="0 0 15px 20px";
+		li_img.fSrc=data[i].goodList[j].imgUrl;
+		li_img.index=j;
+		myul.appendChild(myli);
+		myli.appendChild(li_img);
+		myli.appendChild(li_p1);
+		myli.appendChild(li_p2);
+		myli.appendChild(li_div);
+		li_div.appendChild(li_div_span);
+		li_div.appendChild(li_div_div);
+		myli.appendChild(li_p3);
+
+	}
+
+}
+var count=0;
+nav.children[0].className="col"
+for(var i=0;i<nav.children.length;i++){
+
+	nav.children[i].index=i;
+	nav.children[i].onclick=function(){
+		//换颜色
+		nav.children[count].className="";
+		count=this.index;
+		this.className="col"
+
+		//页面滚动
+		document.documentElement.scrollTop=view.children[this.index].offsetTop;
+
+		// console.log(view.children[this.index].offsetTop,document.documentElement.scrollTop)
+	}			
+
+}
+var num=0;
+
+window.onscroll=function(){
+
+	var H=window.innerHeight;
+	st=document.documentElement.scrollTop;
+
+	for(var i=nav.children.length-1;i>=0;i--){
+
+		var ot=view.children[i].offsetTop;
+		if(st+H/2>=ot&&count!=i){
+			nav.children[count].className="";
+			count=i;
+			// console.log(i)
+			nav.children[i].className="col";
+		}
+		if(st+H/2>=ot){
+			break
+		}
+
+	}
+	F()
+
+}
+function F(){
+	for(var i=num;i<imgs.length;i++){
+
+		var ot=imgs[i].offsetTop;
+		var st=document.documentElement.scrollTop;
+		var H=window.innerHeight;
+		if(ot+200<=H+st){
+			imgs[i].src=imgs[i].fSrc;
+			num=i;
+		}
+		// console.log(i)
+	}
+}
+F()
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑"
+		}
+		li{
+			list-style: none;
+		}
+		#view{
+			width: 260px;
+			margin:100px auto;
+		}
+		#score{
+			width: 260px;
+		}
+		#score li{
+			float: left;
+			height: 42px;
+			width: 48px;
+			padding: 0 2px;
+			background: url(star.png) no-repeat center center;
+		}
+	</style>
+</head>
+<body>
+	<div id="view">
+		<ul id="score">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+<script>
+var view=document.getElementById('view');
+var score=document.getElementById('score');
+
+for(var i=0;i<score.children.length;i++){
+
+	score.children[i].onclick=function(){
+
+	}
+
+}
+
+
+
+
+</script>
+</html>
