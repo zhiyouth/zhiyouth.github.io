@@ -158,21 +158,25 @@ for(var i=0;i<nav.children.length;i++){
 		//换颜色
 		nav.children[count].className="";
 		count=this.index;
-		this.className="col"
+		this.className="col";
 
 		//页面滚动
-		document.documentElement.scrollTop=view.children[this.index].offsetTop;
+		if(document.body.scrollTop){
+			document.body.scrollTop=view.children[this.index].offsetTop;
+		}else{
+			document.documentElement.scrollTop=view.children[this.index].offsetTop;
+		}
+	
 
-		// console.log(view.children[this.index].offsetTop,document.documentElement.scrollTop)
+		// console.log(view.children[this.index].offsetTop,st)
 	}			
 
 }
 var num=0;
-
 window.onscroll=function(){
 
 	var H=window.innerHeight;
-	st=document.documentElement.scrollTop;
+	var st=document.documentElement.scrollTop;
 
 	for(var i=nav.children.length-1;i>=0;i--){
 
@@ -195,7 +199,7 @@ function F(){
 	for(var i=num;i<imgs.length;i++){
 
 		var ot=imgs[i].offsetTop;
-		var st=document.documentElement.scrollTop;
+		var st=document.body.scrollTop||document.documentElement.scrollTop;
 		var H=window.innerHeight;
 		if(ot+200<=H+st){
 			imgs[i].src=imgs[i].fSrc;
