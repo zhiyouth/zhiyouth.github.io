@@ -168,7 +168,7 @@ for(var i=0;i<nav.children.length;i++){
 
 		//页面滚动
 		if(document.body.scrollTop){
-			st=view.children[this.index].offsetTop;
+			document.body.scrollTop=view.children[this.index].offsetTop;
 		}else{
 			document.documentElement.scrollTop=view.children[this.index].offsetTop;
 		}
