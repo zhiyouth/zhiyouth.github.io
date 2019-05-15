@@ -161,10 +161,6 @@ for(var i=0;i<nav.children.length;i++){
 
 	nav.children[i].index=i;
 	nav.children[i].onclick=function(){
-		//换颜色
-		nav.children[count].className="";
-		count=this.index;
-		this.className="col";
 
 		//页面滚动
 		if(document.body.scrollTop){
