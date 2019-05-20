@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+			font-family: "微软雅黑"
+		}
+		#slideshow{
+			position: relative;
+			width: 624px;
+			height: 832px;
+			margin:50px auto;
+			overflow: hidden;
+		}
+		#slideshow img{
+			width: 100%;
+		}
+		#pro,#next{
+			position: absolute;
+			background:rgba(0,0,0,0.2);
+			width: 50px;
+			height: 50px;
+			font-size: 50px;
+			color: white;
+			text-align: center;
+			line-height: 50px;
+			cursor:pointer;
+		}
+		#pro{
+			left: 0px;
+			top: 50%;
+			margin-top:-25px;
+		}
+		#next{
+			right: 0;
+			top: 50%;
+			margin-top:-25px;
+		}
+	</style>
+</head>
+<body>
+	<div id="slideshow">
+		<div id="pro"><</div>
+		<img src="images/a.jpg" alt="" id="slideshow_img">
+		<div id="next">></div>
+	</div>
+</body>
+<script>
+var pro=document.getElementById('pro');
+var next=document.getElementById('next');
+var slideshow=document.getElementById('slideshow');
+var slideshow_img=document.getElementById('slideshow_img');
+var imageurls=[{"url":"images/a.jpg"},{"url":"images/b.jpg"},{"url":"images/c.jpg"},{"url":"images/d.jpg"},{"url":"images/e.jpg"},{"url":"images/f.jpg"}]
+var slideshow=document.getElementById('slideshow');
+
+function sS(imageurls){
+	var count=0;
+	for(var i=0;i<imageurls.length;i++){
+		slideshow_img.index=i;
+	}
+	var timer=setInterval(function(){
+		count++
+		if(count==imageurls.length){count=0}
+		slideshow_img.src=imageurls[count].url
+	},1000)
+	pro.onclick=function(){
+		count--;
+		if(count<0){count=imageurls.length-1;}
+		slideshow_img.src=imageurls[count].url
+		
+	}
+	next.onclick=function(){
+		count++;
+		if(count==imageurls.length){count=0}
+		slideshow_img.src=imageurls[count].url
+		
+	}
+	slideshow.onmouseover=function(){
+		clearInterval(timer)
+	}
+	slideshow.onmouseout=function(){
+		timer=setInterval(function(){
+			count++
+			if(count==imageurls.length){count=0}
+			slideshow_img.src=imageurls[count].url
+		},1000)
+	}
+}
+
+	sS(imageurls)
+</script>
+</html>
