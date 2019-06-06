@@ -1,0 +1,41 @@
+.L_slideshow{
+    position: relative;
+    width:100%;
+    height: 440px;
+}
+
+ .L_slideshow .L_icon{
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -960px;
+    overflow: hidden;
+    width: 1920px;
+
+}
+.L_iconas{
+    width: 7700px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+
+/* .L_slideshow .switch{
+
+    position: absolute;
+    width: 210px;
+    height: 8px;
+    bottom: 15px;
+    left: 50%; 
+    margin-left: -100px;
+    overflow: hidden;
+} */
+/* .L_slideshow .switch div{
+
+   float: left;
+    width: 40px;
+    height: 8px;
+    background: #dedede;
+    margin: 0 15px;
+    border-radius: 5px;
+} */

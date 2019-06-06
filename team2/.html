@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>企业线上总部建设</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #title {
+            height: 40px;
+            background: #f7f9fa;
+            border-bottom: 1px solid #e8edf2
+        }
+
+        #title_box {
+            width: 1210px;
+            height: 40px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        #title_left {
+            float: left;
+            line-height: 40px;
+        }
+
+        #title_left #dl {
+            width: 65px;
+            height: 40px;
+            text-align: center;
+            margin: 0 20px
+        }
+
+        #title_left span {
+            font-size: 12px;
+        }
+
+        #title_left a {
+            font-size: 12px;
+            color: #262626
+        }
+
+        #title_left #zc {
+            display: inline-block;
+            width: 68px;
+            height: 28px;
+            background-color: #2769dc;
+            color: #fff;
+            text-align: center;
+            line-height: 28px
+        }
+
+        #title_right {
+            float: right;
+            font-size: 12px;
+            position: relative;
+            z-index: 20;
+        }
+
+        #title_right>div {
+            position: relative;
+            height: 40px;
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+
+        #title_right a {
+            line-height: 40px;
+            display: block;
+            /*border-right: 1px solid #dedede;*/
+            color: #262626;
+            font-size: 12px;
+        }
+
+        #title_box a:hover {
+            font-weight: bolder;
+            color: #2769dc;
+        }
+
+        /*五行云站*/
+
+        /*商圈*/
+        #z_1 #b_1 {
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+
+            width: 125px;
+            height: 115px;
+            background-color: #fff;
+            top: 40px;
+            left: 0px;
+            display: none;
+            z-index: 6;
+        }
+
+        #z_1 #b_1 a {
+            display: block;
+            margin: 10px 10px
+        }
+
+        /*商圈hover*/
+        #z_1:hover #b_1 {
+            display: block
+        }
+
+        #z_1:hover {
+            background-color: #fff
+        }
+
+        /*全球严选*/
+        #z_2 #b_2 {
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            z-index: 6;
+            width: 125px;
+            height: 115px;
+            background-color: #fff;
+            top: 40px;
+            left: 0px;
+            display: none
+        }
+
+        #b_2 a {
+            display: block;
+            margin: 10px 30px
+        }
+
+        /*全球严选hover*/
+        #z_2:hover #b_2 {
+
+
+            display: block
+        }
+
+        #z_2:hover {
+
+            background-color: #fff
+        }
+
+        /*VIP*/
+
+        #z_3 #b_3 {
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            z-index: 6;
+            width: 195px;
+            height: 160px;
+            background-color: #fff;
+            top: 40px;
+            left: 0px;
+            display: none
+        }
+
+        #b_3 a {
+            display: block;
+            text-indent: 2em;
+            text-align: left;
+        }
+
+        #b_3 p {
+            text-indent: 2em;
+            text-align: left;
+        }
+
+        #b_3 span {
+            color: #2faa18;
+
+
+        }
+
+        #z_3:hover #b_3 {
+
+
+            display: block
+        }
+
+        #z_3:hover {
+
+            background-color: #fff
+        }
+
+        /*营销工具*/
+        #z_4 #b_4 {
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            z-index: 6;
+            width: 120px;
+            height: 313px;
+            background-color: #fff;
+            top: 40px;
+            left: 0px;
+            display: none
+        }
+
+        #z_4:hover #b_4 {
+            display: block
+        }
+
+        #z_4:hover {
+            background-color: #fff
+        }
+
+        /*网站地图*/
+        #z_5 #b_5 {
+            width: 370px;
+            height: 530px;
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            top: 40px;
+            left: -90px;
+            text-align: left;
+            display: none;
+            padding: 20px;
+            z-index: 6;
+            background: #fff
+        }
+
+        #z_5 .map_box li {
+            text-align: left;
+            display: inline-block;
+            margin-right: 30px;
+
+        }
+
+        #z_5 .map_box li a {
+            font-size: 14px;
+            line-height: 34px;
+        }
+
+        #z_5 h4 {
+            line-height: 20px;
+        }
+
+        #z_5:hover #b_5 {
+            display: block
+        }
+
+        #z_5:hover {
+
+            background-color: #fff
+        }
+
+        /*移动端*/
+        #z_7 {
+
+            position: relative;
+        }
+
+        #z_7 span {
+
+            display: inline-block;
+            background: url(image/z_b.png) no-repeat center right;
+            width: 20px;
+            height: 21px;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+        }
+
+        #z_7 #b_7 {
+
+            width: 196px;
+            height: 234px;
+            position: absolute;
+            border-bottom: 1px solid #dedede;
+            border-left: 1px solid #dedede;
+            border-right: 1px solid #dedede;
+            top: 40px;
+            display: none;
+            right: -2px;
+        }
+
+        #z_7:hover #b_7 {
+
+
+            display: block;
+
+        }
+
+        #z_7:hover {
+
+            background-color: #fff;
+        }
+
+        #z_7 span:hover {
+
+            background: url(image/z_c.png) no-repeat center right;
+            right: -10px;
+            color: #2769dc;
+
+
+        }
+
+        .d_1 {
+            height: 50px;
+            background: black;
+        }
+
+        .d_header {
+            position: relative;
+            /* height: 120px; */
+            background: white;
+            width: 1200px;
+            height: 70px;
+        }
+
+        .d_header {
+            width: 1200px;
+            margin: 20px auto;
+            /* overflow: hidden; */
+        }
+
+        .logo img {
+            margin-top: -15px;
+            height: 80px;
+            width: 180px;
+            float: left;
+        }
+
+        .cen_h1 {
+            font-size: 30px;
+            margin-left: 280px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .d_nav>ul>li>ul {
+            position: absolute;
+        }
+
+
+        .d_nav {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 10;
+        }
+
+        .d_nav>ul>li {
+            float: left;
+            padding: 20px;
+        }
+
+
+        .d_nav>ul>li:hover span {
+            color: blue;
+        }
+
+        .d_nav1 li:hover {
+            background: #595959;
+        }
+
+        .d_nav2 li:hover {
+            background: #595959;
+        }
+
+        .d_nav3 li:hover {
+            background: #595959;
+        }
+
+        .d_nav4 li:hover {
+            background: #595959;
+        }
+
+        .d_nav1:hover span {
+            color: blue;
+        }
+
+        .d_nav>ul>li:hover .d_nav1 {
+            display: block;
+        }
+
+        .d_nav>ul>li:hover .d_nav2 {
+            display: block;
+        }
+
+        .d_nav>ul>li:hover .d_nav3 {
+            display: block;
+        }
+
+        .d_nav>ul>li:hover .d_nav4 {
+            display: block;
+        }
+
+        .d_nav>ul>li {
+            position: relative;
+            float: left;
+            height: 80px;
+            margin-left: 48px;
+            line-height: 22px;
+        }
+
+
+
+        .d_nav1 {
+            width: 200px;
+            height: 392px;
+            position: absolute;
+            top: 80px;
+            left: -28px;
+            background: #fff;
+            display: none;
+        }
+
+        .d_nav1 li {
+            text-align: center;
+            margin-top: 10px;
+            width: 200px;
+            height: 56px;
+            line-height: 56px;
+        }
+
+        .d_nav2 {
+            width: 200px;
+            height: 392px;
+            position: absolute;
+            top: 80px;
+            left: -50px;
+            background: #fff;
+            display: none;
+        }
+
+        .d_nav2 li {
+            text-align: center;
+            margin-top: 10px;
+            width: 200px;
+            height: 60px;
+            line-height: 56px;
+        }
+
+        .d_nav3 {
+            width: 200px;
+            height: 302px;
+            position: absolute;
+            top: 80px;
+            left: -50px;
+            background: #fff;
+            display: none;
+        }
+
+        .d_nav3 li {
+            text-align: center;
+            margin-top: 10px;
+            width: 200px;
+            height: 60px;
+            line-height: 56px;
+        }
+
+        .d_nav4 {
+            width: 200px;
+            height: 302px;
+            position: absolute;
+            top: 80px;
+            left: -50px;
+            background: #fff;
+            display: none;
+        }
+
+        .d_nav4 li {
+            text-align: center;
+            margin-top: 10px;
+            width: 200px;
+            height: 60px;
+            line-height: 56px;
+        }
+
+        .d_js {
+            height: 660px;
+            background-color: #ad3827;
+            background-image: url(image/d_a1.jpg);
+        }
+
+        .d_js1 {
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .d_js1 h2 {
+            padding-top: 110px;
+            margin-bottom: 10px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+        .d_js2 {
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 18px;
+            opacity: .4;
+        }
+
+        .d_js3 {
+            font-size: 14px;
+            line-height: 2;
+            color: #fff;
+            opacity: .8;
+
+        }
+
+        .d_xc {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            background: #fff;
+        }
+
+        .d_xc1 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .d_xcq {
+            height: 220px;
+            margin-bottom: 40px;
+            padding-bottom: 60px;
+            border-bottom: solid 1px #e8edf2;
+        }
+
+        .d_xc3 {
+            float: left;
+            margin-right: 100px;
+        }
+
+        .d_xc3 img {
+            width: 300px;
+            height: 220px;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .d_xc4 {
+            width: 800px;
+            height: 220px;
+            display: inline-block;
+        }
+
+        .d_xc5 h4 {
+            margin-bottom: 16px;
+            margin-top: 40px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .d_xc5 p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .d_zh1 {
+            float: right;
+        }
+
+        .d_zh img {
+            width: 300px;
+            height: 220px;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .d_zh2 {
+            width: 800px;
+            height: 220px;
+            display: inline-block;
+        }
+
+        .d_zh3 h4 {
+            margin-bottom: 16px;
+            margin-top: 60px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .d_zh3 p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .d_xcq {
+            height: 220px;
+            margin-bottom: 40px;
+            padding-bottom: 60px;
+            border-bottom: solid 1px #e8edf2;
+        }
+
+        .d_zl1 {
+            float: left;
+            margin-right: 100px;
+        }
+
+        .d_zh1 img {
+            width: 300px;
+            height: 220px;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .d_zl2 {
+            width: 800px;
+            height: 220px;
+            display: inline-block;
+        }
+
+        .d_zl3 h4 {
+            margin-bottom: 16px;
+            margin-top: 40px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .d_zl3 p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+
+        .d_qn1 {
+            float: right;
+        }
+
+        .d_qn img {
+            width: 300px;
+            height: 220px;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .d_qn2 {
+            width: 800px;
+            height: 220px;
+            display: inline-block;
+        }
+
+        .d_qn3 h4 {
+            margin-bottom: 16px;
+            margin-top: 60px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .d_qn3 p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .d_xq {
+            background: #f7f9fa;
+
+        }
+
+        .d_xq1 {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+
+        .d_xq2 {
+            margin-right: -120px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .d_xq3 {
+            float: left;
+            width: 210px;
+            margin-right: 90px;
+        }
+
+        .d_xq3 img {
+            height: 150px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        .d_zx {
+            height: 360px;
+            background-color: #233049;
+            background-image: url(image/da_10.jpg);
+        }
+
+        .d_zx1 {
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            position: relative;
+        }
+
+        .d_zx1 h4 {
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .d_zx1 p {
+            color: #fff;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .d_zx1 a {
+            width: 280px;
+            height: 50px;
+            display: inline-block;
+            background: #f64f38;
+            margin-top: 50px;
+            margin-left: 450px;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .d_yz {
+            background: #fff;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .d_yz1 {
+            width: 1200px;
+            margin: 0 auto;
+            /* height: 500px; */
+        }
+
+        .yzlogo {
+            width: 140px;
+            height: 140px;
+            padding: 10px;
+            margin-left: 500px;
+            margin-bottom: 50px;
+        }
+
+        .d_yz1 img {
+            width: 140px;
+            height: 150px;
+        }
+
+        .d_yzp {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .d_yz1 a {
+            width: 280px;
+            height: 50px;
+            display: inline-block;
+            background: #2769dc;
+            margin-top: 50px;
+            margin-left: 450px;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        #tail_box {
+            width: 100%;
+
+            background: #202340 url(../image/zb_1.jpg) no-repeat center 0;
+            overflow: hidden;
+            color: #7c7e8e;
+            font-size: 13px;
+        }
+
+        #tail_box a {
+
+            color: #7c7e8e;
+            font-size: 13px;
+        }
+
+        #tail_content a:hover {
+
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        #tail_content {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #tail_contentp1 {
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        #tail_contentp1 a {
+            display: inline-block;
+            width: 60px;
+            height: 24px;
+        }
+
+        #tail_contentp2 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #tail_contentp3 {
+            padding-top: 13px;
+            text-align: center;
+            margin: 0 auto
+        }
+
+        #tail_contentp4 {
+            padding-top: 14px;
+            text-align: center;
+            margin: 0 auto;
+
+        }
+
+        #tail_contentp4 a img {
+            width: 90px;
+
+
+        }
+
+        #tail_contentp5 {
+            padding-top: 16px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 16px
+        }
+
+        #tail_contentp5 img {
+            display: inline-block;
+            height: 11px;
+            margin-right: 3px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zbm">
+        <div id="title">
+            <div id="title_box">
+                <div id="clear"></div>
+                <div id="title_left">
+                    <span>欢迎来到世界工厂网！</span>
+                    <a href="ma_denglua.html" id="dl">登录</a>
+                    <a href="ma_zhucea.html" id="zc">免费注册</a>
+                </div>
+                <div id="title_right">
+                    <div><a href="" id="wz">五星云站</a></div>
+                    <div id="z_1">
+                        <a href="" id="sq">商圈</a>
+                        <div id="b_1">
+                            <a href="">我的帖子</a>
+                            <a href="">我的回复</a>
+                        </div>
+                    </div>
+                    <div id="z_2">
+                        <a href="" id="qx">全球严选</a>
+                        <div id="b_2">
+                            <a href="">我的订单</a>
+                            <a href="">收货地址</a>
+                        </div>
+                    </div>
+                    <div id="z_3">
+                        <a href="">VIP会员</a>
+                        <div id="b_3">
+                            <a href="">VIP会员服务</a>
+                            <a href="">会员升级</a>
+                            <p>联系我们：<span>0371-86688225</span></p>
+                        </div>
+                    </div>
+                    <div id="z_4">
+                        <a href="">营销工具</a>
+                        <div id="b_4">
+                            <div id="b_3">
+                                <a href="">查收录</a>
+                                <a href="">查排名</a>
+                                <a href="">查权重</a>
+                                <a href="">营销推广工具</a>
+                                <a href="">伪原创</a>
+                                <a href="">客户信息核查</a>
+                                <a href="">微采</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="z_5">
+                        <a href="">网站地图</a>
+                        <div id="b_5">
+                            <div class="map_box">
+                                <h4 class="drop_tit">线上生态服务</h4>
+                                <ul class="u-list">
+                                    <li class="li"><a href="">企业线上生态分析报告</a></li>
+                                    <li class="li"><a href="">线上总部建设</a></li>
+                                    <li class="li"><a href="">官网升级</a></li>
+                                    <li class="li"><a href="">团队组建与优化</a></li>
+                                    <li class="li"><a href="">营销成本优化</a></li>
+                                    <li class="li"><a href="">国内贸易</a></li>
+                                    <li class="li"><a href="">全球贸易</a></li>
+                                    <li class="li"><a href="">品牌传播优化与提升</a></li>
+                                    <li class="li"><a href="">视频营销</a></li>
+                                    <li class="li"><a href="">公关传播</a></li>
+                                    <li class="li"><a href="">新媒体传播</a></li>
+                                    <li class="li"><a href="">事件营销</a></li>
+                                    <li class="li"><a href="">简单商铺（中小企业）</a></li>
+                                    <li class="li"><a href="">线上生态学院</a></li>
+                                </ul>
+                            </div>
+                            <div class="map_box">
+                                <h4 class="drop_tit">采购市场</h4>
+                                <ul class="u-list">
+                                    <li class="li"><a href="">工业品</a></li>
+                                    <li class="li"><a href="">原材料</a></li>
+                                    <li class="li"><a href="">消费品</a></li>
+                                    <li class="li"><a href="">农业畜牧</a></li>
+                                    <li class="li"><a href="">宠物园艺</a></li>
+                                    <li class="li"><a href="">商务服务</a></li>
+                                </ul>
+                            </div>
+                            <div class="map_box">
+                                <h4 class="drop_tit">常用工具</h4>
+                                <ul class="u-list">
+                                    <li class="li"><a href="">核查企业</a></li>
+                                    <li class="li"><a href="">微采</a></li>
+                                    <li class="li"><a href="">专家咨询</a></li>
+                                    <li class="li"><a href="">伪原创</a></li>
+                                    <li class="li"><a href="">掘词</a></li>
+                                    <li class="li"><a href="">查收录</a></li>
+                                    <li class="li"><a href="">查排名</a></li>
+                                    <li class="li"><a href="">查权重</a></li>
+                                </ul>
+                            </div>
+                            <div class="map_box">
+                                <h4 class="drop_tit">更多频道</h4>
+                                <ul class="u-list">
+                                    <li class="li"><a href="">产品</a></li>
+                                    <li class="li"><a href="">采购</a></li>
+                                    <li class="li"><a href="">视频</a></li>
+                                    <li class="li"><a href="">图库</a></li>
+                                    <li class="li"><a href="">品牌</a></li>
+                                    <li class="li"><a href="">招商</a></li>
+                                    <li class="li"><a href="">人才</a></li>
+                                    <li class="li"><a href="">下载</a></li>
+                                    <li class="li"><a href="">知道</a></li>
+                                    <li class="li"><a href="">积分</a></li>
+                                    <li class="li"><a href="">VIP会员</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="z_6">
+                        <a href="">帮助中心</a>
+                    </div>
+                    <div id="z_7">
+                        <a href=""><span></span>移动版</a>
+                        <div id="b_7">
+                            <img src="image/z_a.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d_header">
+        <div class="d_centre">
+            <div class="logo"><a href="https://www.gongchang.com/service/report.html"><img src="image/logo.jpg"
+                        alt=""></a></div>
+            <h1 class="cen_h1">企业线上总部建设</h1>
+            <div class="d_nav">
+                <ul>
+                    <li>
+                        <span>线上生态建设</span>
+                        <ul class="d_nav1">
+                            <li>企业线生态分析</li>
+                            <li>线上总部建设</li>
+                            <li>官网升级</li>
+                            <li>团队组件与优化</li>
+                            <li>营销成本优化</li>
+                            <li>国内贸易</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span>品牌提升</span>
+                        <ul class="d_nav2">
+                            <li>品牌提升</li>
+                            <li>视频营销</li>
+                            <li>公关传播</li>
+                            <li>心媒体传播</li>
+                            <li>事件营销</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>常用工具</span>
+                        <ul class="d_nav3">
+                            <li>掘词</li>
+                            <li>伪原创</li>
+                            <li>微采</li>
+                            <li>客户信息核查</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>快速推广</span>
+                        <ul class="d_nav4">
+                            <li>简单商铺</li>
+                            <li>发布信息</li>
+                            <li>询词查阅</li>
+                            <li>vip服务</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d_js">
+        <div class="d_js1">
+            <h2>企业线上总部建设</h2>
+            <p class="d_js2">ONLINE HEADQUARTER</p>
+            <P class="d_js3">
+                线上总部即企业官网，线上总部是企业线上生态的根本和互联网新营销时代的起点，从认知层面上提升对 "线上总部"的认识，把其和企业线<br>
+                下总部放到同等甚至更高的位置上，是把握好需求，开展好线上生态建设工作的重要因素之一
+            </P>
+        </div>
+    </div>
+    <div class="d_xc">
+        <div class="d_xc1">
+            <div class="d_xcq">
+                <div class="d_xc3">
+                    <img src="image/da_2.jpg" alt="">
+                </div>
+                <div class="d_xc4">
+                    <div class="d_xc5">
+                        <h4>线上品牌宣传的重要载体</h4>
+                        <p>能够完美体现品牌定位的企业官网，要求线上总部从视觉风格、排版布局、栏目规划、内容展现等多个<br>
+                            层面综合系统的定制化设计与建设。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d_xcq">
+                <div class="d_zh1">
+                    <img src="image/da_3.jpg" alt="">
+                </div>
+                <div class="d_zh2">
+                    <div class="d_zh3">
+                        <h4>线上客户信息的获取和转化</h4>
+                        <p>与线下总部对应，线上总部的转化也理应是非常高的，企业线上总部的访问速度、移动端适配、搜索引擎优化，高<br>
+                            可用指标，交互体验，转化方式等30多项要素决定了线上的客户转化率
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d_xcq">
+                <div class="d_zl1">
+                    <img src="image/da_4.jpg" alt="">
+                </div>
+                <div class="d_zl2">
+                    <div class="d_zl3">
+                        <h4>线上生态中各 "分布"的指令中心和链接枢纽</h4>
+                        <p>不管是布局在国外诸多语种的小语种网站，又或是像天猫、京东、亚马逊的等线上售卖节点，还是微信公众号、<br>
+                            facebook专题、今日头条的头条号等新媒体“据点”，都属于企业线上生态的距离客户周边的各“分部”，是一<br>
+                            个又一个的节点，这些节点都应该紧密链接企业线上总部，统一指挥，协同发展，才能让“线上生态”更有生命力<br>
+                            和可控性
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d_xcq">
+                <div class="d_qn1">
+                    <img src="image/da_5.jpg" alt="">
+                </div>
+                <div class="d_qn2">
+                    <div class="d_qn3">
+                        <h4>线上数据和企业内部IT系统的链接枢纽</h4>
+                        <p>在线上生态体系中，线上产生的访客、询盘、订单、留言、预约、反馈、投诉等数据可以通过线上总部与企业已有<br>
+                            的内部 IT 系统有机结合，协同工作，基于数据分析结果，重塑企业的工作流程。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d_xq">
+        <div class="d_xq1">
+            <div class="d_xq2">
+                <div class="d_xq3">
+                    <img src="image/da_6.jpg" alt="">
+                    <p>缩短客户距离</p>
+                </div>
+                <div class="d_xq3">
+                    <img src="image/da_7.jpg" alt="">
+                    <p>提升客户决策效率</p>
+                </div>
+                <div class="d_xq3">
+                    <img src="image/da_8.jpg" alt="">
+                    <p>奠定多维线上生态布局基础</p>
+                </div>
+                <div class="d_xq3">
+                    <img src="image/da_9.jpg" alt="">
+                    <p>解放企业高端人力资源</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d_zx">
+        <div class="d_zx1">
+            <h4>联系工程师咨询线上总部建设服务</h4>
+            <p>
+                与建设企业线下总部不同，企业线上总部的建设具有高效、低成本等特点
+                <br>
+                有显著产品竞争力的企业通过和专业的线上总部建设团队世界工厂网合作，可以快速取得显著成果。
+            </p>
+            <a href=https://wt.zoosnet.net/LR/Chatpre.aspx?id=LRW77021783&cid=858a10f8596340efb02bac3fc2c02589&lng=cn&sid=0d89b56f5beb40f080814fec13ed62da&p=https%3A//www.gongchang.com/service/online.html&rf1=https%3A//www.gongchang.com/service/report&rf2=.html&msg=&d=1559706472368
+                class="d_zxa2">咨询工程师</a>
+        </div>
+    </div>
+    <div class="d_yz">
+        <div class="d_yz1">
+            <div class="yzlogo">
+                <img src="image/da_11.jpg" alt="">
+            </div>
+            <p class="d_yzp">
+                世界工厂网研发的专门为实体企业官网而设计的五星云站，是实体企业构建线上总部的优先选择<br>
+                不仅可以承载线上推广和品牌传播的需求，也为公司配套在线上实施的商务转化、技术展示、比标对标和项目合作的实施工作提供了横向扩展的可能性 <br>
+                更为融合公司本身的信息化系统（订单系统，客户管理系统，客户服务系统和智能生产制造系统等）提供了丰富的 API接口。
+            </p>
+            <a href="https://www.gongchang.com/prod/star.html">了解五星云站</a>
+        </div>
+    </div>
+    <div id="tail_box">
+        <div id="tail_content">
+            <p id="tail_contentp1">
+                <a href="">网站首页</a><span>| </span>
+                <a href="">关于我们</a><span>| </span>
+                <a href="">招贤纳士</a><span>| </span>
+                <a href="">联系方式</a><span>| </span>
+                <a href="">使用协议</a><span>| </span>
+                <a href="">版权隐私 </a><span>| </span>
+                <a href="">网站地图 </a><span>| </span>
+                <a href="">排名推广</a><span>| </span>
+                <a href="">广告服务</a><span>| </span>
+                <a href="">网站留言</a>
+            </p>
+            <p id="tail_contentp2">增值电信业务经营许可证 |网络文化经营许可证 |出版物经营许可证 |广播电视节目制作经营许可证 |互联网药品信息服务资格证</p>
+            <p id="tail_contentp3">(c)2008-2019 世界工厂网V3.6 All Rights ReservedB2-20151232</p>
+
+            <p id="tail_contentp4">
+                <a href=""><img src="image/zb_a.png" alt=""></a>
+                <a href="" id="z_a"><img src="image/zb_b.png" alt=""></a>
+                <a href=""><img src="image/zb_c.png" alt=""></a>
+                <img src="image/zb_d.png" alt="">
+                <a href=""><img src="image/zb_e.png" alt=""></a>
+                <img src="image/zb_f.png" alt="">
+                <img src="image/zb_g.png" alt="">
+            </p>
+            <p id="tail_contentp5"><a
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010202000002"><img
+                        src="images/zb_2.png" alt="">豫公网安备 41010202000002号</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

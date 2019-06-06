@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.lw_zzz{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+.lw_xxx{
+    border: 1px solid #afafaf;
+    background: #ffffff;
+    border-top: 2px solid black;
+    width: 900px;
+    height: 300px;
+    float: right;
+    margin-top: 30px;
+}
+.lw_xxx1{
+    width: 900px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 800;
+    border-bottom: 1px solid#afafaf;
+}
+
+/* 下方五个块儿 */
+.lw_xxx .lw_oiu{
+    border-right: none;
+}
+.lw_xxx li{
+    list-style: none;
+    width: 179px;
+    height: 249px;
+    border-right: 1px dashed #afafaf;;
+    float: left;
+}
+
+.lw_xxx2{
+    width: 120px;
+    height: 120px;
+    margin: 18px 30px;
+}
+.lw_xxx2 img{
+    width: 120px;
+    height: 120px;
+    transition: all 0.5s;
+}
+.lw_xxx2 img:hover{
+    transform: scale(1.1)
+}
+
+.lw_xxx a{
+    text-decoration: none;
+}
+.lw_xxx p,.lw_xxx span{
+    text-align: center;
+    font-size: 13px;
+    color: #333333;
+    line-height: 20px;
+    margin: 0 7px;
+}
+.lw_xxx p:hover{
+    color: orange;
+}
+.lw_xxx span{
+    color: red;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 60px;
+    line-height: 50px;
+}

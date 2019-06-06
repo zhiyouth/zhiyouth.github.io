@@ -1,0 +1,278 @@
+*{
+	margin:0;
+	padding: 0;
+}
+a{
+	text-decoration: none
+}
+li{
+	list-style:none;
+}
+#title{
+	height: 40px;
+	background:#f7f9fa;
+	border-bottom: 1px solid #e8edf2
+}
+#title_box{	
+	width: 1210px;
+	height:40px;
+	margin:0 auto;
+	clear: both;
+}
+#title_left{
+	float: left;
+	line-height: 40px;	
+}
+#title_left #dl{
+	width: 65px;
+	height: 40px;
+	text-align: center;
+	margin: 0  20px
+}
+#title_left span{	
+	font-size: 12px;
+}
+#title_left a{
+	font-size: 12px;
+	color: #262626
+}
+#title_left #zc{
+	display: inline-block;
+	width: 68px;
+	height: 28px;
+	background-color:#2769dc;
+	color: #fff ;
+	text-align: center;
+	line-height:28px
+}
+#title_right{
+	float:right;
+	font-size: 12px;
+	position: relative;
+}
+#title_right>div{
+	position: relative;
+	height: 40px;
+	display: inline-block;
+	width:80px;
+	text-align: center;
+}
+#title_right a{
+	line-height: 40px;
+	display: block;
+	/*border-right: 1px solid #dedede;*/
+	color:#262626;
+	font-size: 12px;
+}
+#title_box  a:hover{	
+	font-weight: bolder;
+	color:#2769dc;
+}
+/*五行云站*/
+
+/*商圈*/
+#z_1 #b_1{
+	position:absolute;
+	border-bottom: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+	border-right:  1px solid #dedede;
+	
+	width: 125px;
+	height: 100px;
+	background-color: #fff;
+	top:40px;
+	left:0px ;
+	display: none;
+	z-index: 6;
+	}
+#z_1 #b_1 a{
+	display: block;
+	margin:10px 10px
+}
+
+/*商圈hover*/
+#z_1:hover #b_1{
+	display: block
+
+}
+#z_1:hover{
+	background-color: #fff
+}
+
+/*全球严选*/
+#z_2 #b_2{
+	position:absolute;
+	border-bottom: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+	border-right:  1px solid #dedede;
+	z-index: 6;
+	width: 125px;
+	height: 100px;
+	background-color: #fff;
+	top:40px;
+	left:0px ;
+	display: none
+	}
+	#b_2 a{
+		display:block;
+		margin: 10px 30px
+	}
+	/*全球严选hover*/
+	#z_2:hover #b_2{
+
+
+		display: block
+	}
+
+	#z_2:hover{
+
+		background-color: #fff
+	}
+	/*VIP*/
+
+	#z_3 #b_3{
+		position:absolute;
+		border-bottom: 1px solid #dedede;
+		border-left: 1px solid #dedede;
+		border-right:  1px solid #dedede;
+		z-index: 6;
+		width: 195px;
+		height: 110px;
+		background-color: #fff;
+		top:40px;
+		left:0px ;
+		display: none
+	}
+	#b_3 a{
+		display: block;
+		text-indent: 2em;
+		text-align:left;
+	}
+	#b_3 p{
+		text-indent: 2em;
+		text-align:left;
+	}
+	#b_3 span{
+		color:#2faa18;
+
+	
+	}
+	#z_3:hover #b_3{
+
+
+		display: block
+	}
+
+	#z_3:hover{
+
+		background-color: #fff
+	}
+
+	/*营销工具*/
+	#z_4 #b_4{
+		position:absolute;
+		border-bottom: 1px solid #dedede;
+		border-left: 1px solid #dedede;
+		border-right:  1px solid #dedede;
+		z-index: 6;
+		width: 120px;
+		height: 283px;
+		background-color: #fff;
+		top:40px;
+		left:0px ;
+		display: none
+	}
+	#z_4:hover #b_4{
+		display: block
+	}
+
+	#z_4:hover{
+		background-color: #fff
+	}
+	/*网站地图*/
+	 #z_5  #b_5{
+		width: 370px;
+		height: 440px;
+		position:absolute;
+		border-bottom: 1px solid #dedede;
+		border-left: 1px solid #dedede;
+		border-right:  1px solid #dedede;
+		top: 40px;
+		left:-90px;
+		text-align: left;
+		display: none;
+		padding: 20px;	
+		z-index: 6;
+		background: #fff
+	}
+	 #z_5 .map_box li{
+	 	text-align: left;
+	 	display: inline-block;
+		margin-right:30px;
+	
+	 }
+	 #z_5 .map_box li a{
+		font-size:14px ;	
+		line-height: 34px; 	
+	 }
+	 #z_5 h4{
+	 	line-height: 20px;
+	 }
+	#z_5:hover #b_5{
+		display: block
+	}
+	#z_5:hover{
+
+		background-color: #fff
+	}
+
+	/*移动端*/
+	#z_7{
+
+		position: relative;
+	}
+
+	#z_7 span{
+
+		display: inline-block;
+		background:url(../images/z_b.png) no-repeat center right;
+		width: 20px;
+		height: 21px;
+		position: absolute;
+		top:10px;
+		left: 0px;
+	}
+	#z_7 #b_7{
+
+		width: 196px;
+		height: 234px;
+		position:absolute;
+		border-bottom: 1px solid #dedede;
+		border-left: 1px solid #dedede;
+		border-right:  1px solid #dedede;
+		top:40px;
+		display: none;
+		right: -2px;
+		z-index: 599
+	}
+
+	#z_7:hover #b_7{
+
+
+		display: block; 
+
+	}
+
+	#z_7:hover{
+
+		background-color: #fff;
+	}
+
+	#z_7 span:hover{
+
+		background:url(../images/z_c.png) no-repeat center right;
+		right:-10px;
+		color:#2769dc;
+
+
+	}

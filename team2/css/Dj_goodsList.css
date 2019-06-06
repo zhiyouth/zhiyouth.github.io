@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.Dj_header {
+    width: 100%;
+    height: 109px;
+    border-bottom: 3px solid #0033cc;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.Dj_heaPar {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.Dj_conment {
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+
+.Dj_header img {
+    width: 148px;
+    height: 53px;
+    padding: 5px;
+    border-right: 1px solid #dedede;
+    padding: 20px 30px;
+    margin-top: 10px;
+}
+
+.Dj_goodsFind {
+    height: 80px;
+    display: flex;
+    padding: 20px 15px;
+}
+
+.Dj_goodsFind div:nth-child(1) {
+    width: 80px;
+    font-size: 20px;
+    margin-top: 27px;
+    /* line-height: 10px; */
+}
+
+.Dj_goodsFind div:nth-child(2) {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: 60px;
+    font-size: 15px;
+}
+
+.Dj_goodsFind p:nth-child(1) {
+    line-height: 30px;
+    text-align: center;
+    width: 80px;
+    border: 1px solid #d7d7d7;
+    padding: 10px;
+    background: url(../images/dj_san.png) no-repeat 75px center;
+}
+
+.Dj_goodsFind p:nth-child(2) {
+    border: 1px solid #d7d7d7;
+    padding: 10px;
+    width: 402px;
+}
+
+.Dj_goodsFind p:nth-child(2) input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    outline: none;
+}
+
+.Dj_goodsFind p:nth-child(2) span {
+    text-align: center;
+    float: right;
+    width: 50px;
+    height: 20px;
+    font-size: 5px;
+    margin-left: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.Dj_goodsFind p:nth-child(3) {
+    font-size: 18px;
+    width: 80px;
+    padding: 10px;
+    background-color: #1269d3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.Dj_span {
+    /* width: 240px; */
+}
+
+.Dj_span span {
+    display: inline-block;
+    border: 1px solid #d7d7d7;
+    margin-top: 38px;
+    margin-left: 5px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.triangle {
+    width: 265px;
+    height: 90px;
+    border: 1px solid #d7d7d7;
+    padding: 10px;
+    position: absolute;
+    top: 90px;
+    left: 374px;
+    border-top: none;
+    display: none;
+}
+
+.triangle li {
+    list-style: none;
+    float: left;
+    width: 70px;
+    height: 38px;
+    background-color: #f2f2f2;
+    border: 1px solid#dddddd;
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 37px;
+}
+
+.triangle li:hover {
+    color: #1269d3;
+}
+
+.Dj_daohang {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.Dj_tab {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.Dj_tab span {
+    display: inline-block;
+    border: 2px solid #ffffff;
+    padding: 20px 10px;
+    margin-right: 20px;
+}
+
+.Dj_tab span:nth-child(2) {
+    border-bottom: 2px solid#0033cc;
+}
+
+.Dj_tab span:hover {
+    color: #0033cc;
+    border-bottom: 2px solid#0033cc;
+}
+
+.Dj_goddsA {
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-top: 30px;
+}
+
+/* 商品区域选择范围 */
+
+.Dj_goodsArea {
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-top: 3px solid red;
+    font-size: 14px;
+    color: #999999;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.Dj_goodsArea div {
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+.Dj_currentPosition {
+    /* font-size: 14px; */
+}
+
+.selected {
+    background: url(../images/dj_find.png) no-repeat center center;
+}
+
+.selected input {
+    border: none;
+    outline: none;
+    width: 200px;
+    /* height: 20px; */
+    border: 1px solid #999999;
+    padding: 5px;
+    background: url(../images/dj_find.png) no-repeat 175px center;
+}
+
+.Dj_goodsAreaComent span {
+    color: #666666;
+}
+
+.Dj_goodsAreaComent span:nth-child(1) {
+    color: #999999;
+}
+
+.Dj_goodsAreaComent span:nth-child(2) {
+    color: #ffffff;
+    background-color: #ec3901;
+    padding: 5px 10px;
+}
+
+.Dj_goodsAreaLast span:last-child {
+    width: 54px;
+    color: #ec3901;
+    float: right;
+    margin-right: 30px;
+}
+
+.selected span:last-child {
+    background: url(../images/dj_new.png) no-repeat 27px center;
+}
+
+.Dj_changeBtn {
+    background: url(../images/dj_jiantou.png) no-repeat 27px center;
+}
+
+/* 综合排序 */
+
+.Dj_comprehensiveRanking {
+    border-bottom: none;
+}
+
+.Dj_comprehensiveRanking span {
+    color: #666666;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 15px;
+    border-right: 1px solid #f5f5f5;
+}
+
+.Dj_comprehensiveRanking span:first-child {
+    color: #cc0000;
+}
+
+.Dj_jiantou {
+    width: 70px;
+    background: url(../images/dj_jiantou2.png) no-repeat 62px center;
+}
+
+.Dj_choiceGoods label {
+    padding: 5px;
+}
+
+.Dj_choiceGoods p {
+    /* width: 300px; */
+    display: inline-block;
+    padding: 3px;
+}
+
+.Dj_Input {
+    padding: 5px;
+    width: 60px;
+    height: 15px;
+    border: none;
+    outline: none;
+    border: 1px solid #c8c8c8;
+}
+
+.Dj_choiceGoods p:hover {
+    border: 1px solid #b3abab;
+}
+
+#Dj_hide {
+    /* display: inline; */
+    float: right;
+   left: 20px;
+    width: 40px;
+    background-color: #cc0000;
+    color: #ffffff;
+    text-align: center;
+    /* display: none; */
+}
+
+/* 更新时间 显示顺序 */
+
+.Dj_condition {
+    width: 120px;
+    margin: 10px;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+    top: 220px;
+    display: none;
+}
+
+.Dj_newDate {
+    left: 88px;
+}
+
+.Dj_condition li {
+    list-style: none;
+    height: 20px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.Dj_priceSort {
+    left: 183px;
+}
+
+.Dj_condition li:hover {
+    background-color: #000000;
+    opacity: .6;
+    color: #ec3901;
+}
+/* 免责声明 */
+.Dj_exempt{
+    width: 100%;
+    margin-top: 30px;
+}
+.Dj_exempts{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 14px;
+    color: #333333;
+    padding: 30px;
+    background: url(../images/dj_sm_an.png) no-repeat 70px center #ffffff;
+}
+
+.Dj_exempts dl{
+   margin-left: 170px;
+    display: flex;
+}
+.Dj_exempts dl dt{
+width: 75px;
+   color: #e60000;
+ }
+ .Dj_exempts dl dd{
+     float: left;
+    color: #888888;
+  }

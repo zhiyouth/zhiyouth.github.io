@@ -1,0 +1,239 @@
+#Dj_goodsListNav {
+    width: 100%;
+    position: relative;
+}
+
+.Dj_goodsListWrong {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+}
+
+.Dj_goodsListLeft {
+    width: 1000px;
+}
+.Dj_goodsListLeft a{
+    display: block;
+}
+
+.Dj_goodsView {
+    display: flex;
+    padding: 20px 0;
+    background-color: #ffffff;
+    margin-left: -10px;
+    margin-top: 50px;
+}
+
+.Dj_goodsView>img {
+    width: 162px;
+    height: 162px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.Dj_des {
+    height: 167px;
+    margin: 0 10px 0 20px;
+    padding: 10px;
+}
+.Dj_des img{
+    width: 52px;
+    height: 18px;
+    margin-top: 3px;
+}
+
+.Dj_des div:nth-child(1) {
+    display: flex;
+    padding: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.Dj_des div:nth-child(1)>p {
+    margin-left: 10px;
+}
+
+.Dj_des>table {
+    line-height: 30px;
+    font-size: 12px;
+    color: #696969;
+    border-collapse: collapse;
+    border: 1px solid #ededed;
+    position: relative;
+}
+
+.Dj_des>table th {
+    font-size: 12px;
+    text-align: right;
+    color: #696969;
+    background-color: #fafafa;
+    padding: 0 20px;
+}
+
+.Dj_des>table td {
+    padding: 0 30px;
+    text-align: left;
+}
+
+.Dj_des>p {
+    width: 500px;
+    color: #b2b2b2;
+    font-size: 12px;
+    margin-top: 27px;
+    height: 10px;
+}
+
+.dj_intro {
+    width: 220px;
+    height: 167px;
+    line-height: 25px;
+    /* border: 1px solid red; */
+    text-align: right;
+}
+
+.dj_intro li {
+    list-style: none;
+    font-size: 12px;
+}
+
+.dj_intro li:nth-child(1) span:nth-child(1) {
+    color: #e60000;
+    font-size: 20px;
+}
+
+.dj_intro li:nth-child(1) span:nth-child(2) {
+    color: #333;
+    font-size: 12px;
+}
+
+.dj_intro li:nth-child(2) {
+    color: #696969;
+}
+
+.dj_intro li:nth-child(3) {
+    color: #b2b2b2;
+}
+
+.dj_intro li:nth-child(4) {
+    color: #ff8400;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dj_intro li:nth-child(5) {
+    color: #b2b2b2;
+}
+
+.dj_intro li:last-child {
+    float: right;
+    width: 80px;
+    height: 10px;
+    color: #333333;
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 10px;
+}
+/* ------------------------ */
+.Dj_goodsListRight {
+    width: 180px;
+    height: 800px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #666666;
+    line-height: 25px;
+    /* border: 1px solid black; */
+}
+
+.Dj_goodsRightCon {
+    border-top: 2px solid #1269d3;
+    line-height: 30px;
+    margin-top: 50px;
+    /* margin-bottom: 20px; */
+    background-color: #ffffff;
+}
+.Dj_goodsRightCon div:nth-child(2){
+    border-top: 1px solid #ededed;
+}
+.Dj_goodsRightCon strong {
+    padding-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.Dj_goodsRightCon i{
+    width: 4px;
+    height: 16px;
+    background: #1269d3;
+    float: left;
+    margin-top: 8px;
+    margin-left: 5px;;
+}
+
+.Dj_goodsRightCon div span {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 5px;
+}
+
+.Dj_goodsRightCon div span:nth-child(1) {
+    width: 13px;
+    height: 13px;
+}
+
+.Dj_Top {
+    color: white;
+}
+
+.Dj_noTop {
+    color: #000000;
+    background: #666666;
+}
+
+.Dj_topOne {
+    background-color: #dd2726;
+}
+
+.Dj_toptwo {
+    background-color: #ec5d31;
+}
+
+.Dj_topthree {
+    background-color: #f68951;
+}
+
+.Dj_goodsRightCon div span:last-child {
+    float: right;
+}
+/* 最新供应 */
+.Dj_latestSupply{
+    border-top: 2px solid #1269d3;
+    line-height: 30px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    font-size: 12px;
+}
+.Dj_latestSupply strong {
+    padding-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.Dj_latestSupply i{
+    width: 4px;
+    height: 16px;
+    background: #1269d3;
+    float: left;
+    margin-top: 8px;
+    margin-left: 5px;;
+}
+.Dj_latestSupply ul{
+    margin-left: 17px;
+}
+.Dj_latestSupply ul li:nth-child(1){
+    border-top: 1px solid #ededed;
+}

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+i{
+    width: 1px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #484a44;
+    vertical-align: middle;
+}
+
+li{
+    list-style: none;
+}
+.L_head{
+    width:100%;
+
+   
+    overflow: hidden;
+}
+
+/* 头部 */
+.Lhead_view{
+    overflow: hidden;
+    width: 1200px;
+    height: 46px;
+    /* border: 1px solid red; */
+    margin: 38px auto;
+}
+.Lhead_view .Lview_icon{
+    float: left;
+    width: 190px;
+    border-right: 1px solid #dedede;
+   
+}
+.Lhead_view .Lview_icon img{
+    width: 160px;
+    height: 45px;
+}
+.Lhead_view h1{
+    display: inline;
+    font-size:24px;
+    line-height: 45px;
+    padding-left:30px; 
+}
+.Lhead_view a:hover{
+    color: #2769dc;
+}
+.Lhead_view .seek{
+    border: 1px solid #dedede;
+    float:right;
+    height: 44px;
+    width: 400px;
+}
+.Lhead_view .form{
+    display: inline-block;
+}
+.Lhead_view .search_input{
+    width: 271px;
+    height: 36px;
+    margin: 0 20px;
+    outline: 0;
+    border: 0;
+
+}
+
+.Lhead_view .btn{
+    width: 84px;
+    height: 46px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color:#2769dc; 
+    border: 0;
+}
+
+
+
+/* 列表 */
+.L_list{
+    height: 50px;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+}
+.L_list_content{
+    width: 1200px;
+    height: 50px;
+    /* border: 1px solid green; */
+    margin: 0 auto;
+    
+}
+.L_list .L_nvn_1{
+    display: inline-block;
+    width: 304px;
+    height: 50px;
+    /* border: 1px solid black; */
+    line-height: 50px;
+    text-indent: 1em;
+    color: #fff;
+    background-color: #2769dc;
+    font-size: 16px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    
+    
+}
+.L_list .L_nvn{
+    position: relative;
+}
+.L_list_content>div{
+    display: inline-block;
+}
+.L_list_content .bar{
+    width: 1px;
+    height: 16px;
+
+    background-color: #666;
+}
+.L_list_content>a{
+    margin: 0 20px;
+}
+.L_list_content>a:hover{
+    color: #2769dc;
+}

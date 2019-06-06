@@ -1,0 +1,315 @@
+body{
+    background: #f5f5f5
+}
+.lw_biggbox{
+    width: 100%;
+    background: #ffffff;
+    padding-top:20px 
+}
+.lw_nav{
+    width: 1200px;
+    margin: 28px auto 0;
+    font-size: 0 
+}
+.lw_allcategory{
+    width: 210px;
+    height: 47px;
+    background: #0033cc url(../images/cat_icno.png) 19px center no-repeat;
+    font-size: 19px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 47px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.lw_allcategoryBox{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+}
+.lw_territory{
+    width: 988px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 47px;
+    position: relative;
+}
+.lw_territory .lw_qwe{
+    float: left;
+    padding: 0 24px;
+   
+    line-height: 44px;
+    font-size: 16px
+}
+.lw_territory .lw_qwe:hover{  
+    border-bottom: 3px solid #0033cc;
+    color: #0033cc
+}
+.lw_carousel{
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+.lw_carousel_imgs{
+    position: relative;
+}
+.lw_carousel a{
+    display: block;
+    width: 1800px;
+    height: 460px;
+    position: absolute;
+    top: 460px;
+    left: 50%;
+    margin-left: -900px
+}
+.lw_carousel_imgs .lw_img1{
+    background: url(../images/daobo2.jpg)  rgb(204, 225, 243) center center no-repeat
+}
+.lw_carousel_imgs .lw_img2{
+    background: url(../images/daobo1.jpg) rgb(204, 225, 243) center center no-repeat
+}
+.lw_littleBox div{
+    width: 40px;
+    height: 10px;
+    margin: 4px 0;
+    background: #908f90;
+    display: inline-block;
+    cursor: pointer;
+}
+.lw_littleBox{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -44px
+}
+.lw_Hot a{
+    background: url(../images/lw_img_e3dc8fa_02.png) 53px 5px no-repeat
+}
+.lw_allcategoryList{
+    position: absolute;
+    height: 445px;
+    top: 48px;
+    left: 0;
+    background: #ffffff;
+    z-index: 2;
+    padding: 6px 16px 0 19px ;
+    display: none
+}
+.lw_allcategoryList li{
+    width: 175px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f6f6f6;
+    position: relative;
+}
+.lw_allcategoryList li a{
+    font-size: 14px;
+    line-height: 30px;
+    color: #a5a5a5;
+    margin-right: 8px
+}
+.lw_allcategoryList li h4 a{
+    font-size: 16px;
+    font-weight: normal;
+    color: #323232;
+}
+.lw_allcategoryList li a:hover{
+    color:#ff5256;
+}
+/* 鼠标经过鞋包配饰 */
+.lw_allcategoryList_shoes{
+    position: absolute;
+    width: 694px;
+    height: 430px;
+    background: #ffffff;
+    left: 191px;
+    top: -7px;
+    border-top: 1px solid #e6e6e6;
+    padding: 10px 0 10px 26px ;
+    overflow: hidden;
+    display: none
+}
+.lw_allcategoryList_shoesContent{
+    width: 451px;
+    height: 431px;
+    border-right:  1px solid #e6e6e6;
+    float: left;
+    padding-right: 24px
+}
+.lw_allcategoryList_shoesAd{
+    width: 216px;
+    height: 431px;
+    float: left;
+    background: url(../images/lw_adicon.png) no-repeat 0 412px
+}
+.lw_allcategoryList_shoesTitle{
+    margin-top: 17px;
+    border-bottom: 1px solid #ededed;
+    overflow: hidden;
+}
+.lw_allcategoryList_shoesTitle h2{
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+}
+.lw_allcategoryList_shoesTitle p{
+    float: right;
+}
+.lw_allcategoryList_shoesTitle p span{
+    font-size: 13px;
+    color: #a5a5a5;
+    margin-right: 10px;
+}
+.lw_allcategoryList_shoesTitle p a{
+    color: #60a3ff;
+    font-size: 13px;
+}
+.lw_allcategoryList_shoesTitle p a:hover{
+    color: #60a3ff;
+}
+.lw_allcategoryList_shoesneirong{
+    overflow: hidden;
+    margin-top: 10px
+}
+.lw_allcategoryList_shoesContent .lw_allcategoryList_shoesneirong a{
+    float: left;
+    margin-right: 84px;
+    font-size: 13px ;
+    color:#5e5e5e;
+    line-height: 25px
+}
+/* 右侧信息栏 */
+.lw_MsgBox{
+    position: absolute;
+    background: #ffffff;
+    right: 0px;
+    top:55px;
+    z-index: 5;
+}
+.lw_MsgBox_head{
+    width: 260px;
+    height: 85px;
+    overflow: hidden;
+}
+.lw_MsgBoxportrait{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-left: 16px;
+    margin-top: 18px
+}
+.lw_MsgBox_head p{
+    font-size: 12px;
+    float: right;
+}
+.lw_MsgBox_head .lw_MsgBox_headhi{
+    color: #323232;
+    margin-right: 98px;
+    margin-top: 23px
+}
+.lw_MsgBox_head .lw_MsgBox_headwel{
+    margin-right: 87px;
+    margin-top: -19px;
+    color: #999999
+}
+/* 登录 */
+.lw_MsgBox_denglu{
+    height: 41px;
+}
+.lw_MsgBox .lw_MsgBox_denglu a{
+    display: inline-block;
+    line-height: 39px;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+    padding: 0 ;
+    width: 129px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed
+}
+.lw_MsgBox_denglu_A{
+    background:url(../images/img_e3dc8fa.png) #f8f8f8 34px -239px no-repeat;
+    border-right: 1px solid #ededed;
+}
+.lw_MsgBox_denglu_B{
+    background:url(../images/img_e3dc8fa.png) #f8f8f8 21px -300px no-repeat
+}
+
+/* 公告 */
+.lw_MsgBox_gonggao{
+    margin: 10px;
+    font-size: 14px;
+    color: #e60000;
+    line-height: 27px;
+    font-weight: normal;
+    width: 240px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+}
+.lw_MsgBox_gonggaodiv{
+    position: absolute;
+    width: 84px;
+    height: 1px;
+    top: 27px;
+    left: 0;
+    background: #e60000
+}
+.lw_MsgBoxnoticecontent {
+    width: 240px;
+    margin: 10px;
+    line-height: 30px
+}
+.lw_MsgBoxnoticecontent a{
+    font-size: 14px;
+    color: #666666;
+}
+.lw_MsgBoxnoticecontent a:hover{
+    color:#e60000
+}
+.lw_MsgBoxnoticecontentred p{
+    color:#e60000
+}
+.lw_MsgBoxVIP{
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    background: #fafafa
+}
+.lw_MsgBoxVIPmsag{
+    font-size: 14px;
+    color: #323232;
+    font-weight: normal;
+    vertical-align: middle;
+    line-height: 36px;
+    display: inline-block;
+    margin-left: 3px
+}
+.lw_MsgBoxVIPbox{
+    width: 3px;
+    height: 14px;
+    background: #e60000;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left:10px
+}
+.lw_orderForm{
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+    margin-top: 10px
+}
+.lw_orderFormimgs{
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+    background: url(../images/lw_ico-index.png) -32px -507px no-repeat
+}
+.lw_orderForm p{
+    margin-top: 4px;
+    font-size: 14px;
+    color: #666666
+}
+.lw_orderForm:hover .lw_orderFormimgs{
+    background: url(../images/lw_ico-index.png) 0px -507px no-repeat
+}

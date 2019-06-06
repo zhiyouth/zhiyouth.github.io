@@ -1,0 +1,138 @@
+/* 头部 */
+.lw_head{
+    width: 1200px;
+    height: 55px;
+    margin: 10px auto;
+    margin-top: 25px
+}
+.lw_logo,.lw_tit,.lw_SE{
+    float: left;
+}
+.lw_logo{
+    border-right: 1px solid #ededed;
+    padding: 0 10px
+}
+.lw_tit{
+    margin-top: 16px;
+    margin-left: 10px;
+    font-size: 18px
+}
+/* 输入框 */
+.lw_SE{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.lw_options{
+    line-height: 38px;
+    font-size: 12px;
+    border: 1px solid #d7d7d7;
+    width: 102px;
+    text-align: center;
+    background: url(../images/headerdown.png) 87px center no-repeat;
+    cursor: pointer
+}
+.lw_SE_box{
+    float: left;
+    width: 397px;
+    height: 38px;
+    border: 1px solid #d7d7d7;
+    border-left: none;
+    border-right: none
+}
+.lw_SE_box input{
+    width: 210px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+}
+.lw_guanjianzi{
+    display: inline-block;
+    margin-left: 36px;
+    cursor: pointer
+}
+.lw_guanjianzi p{
+    display: inline-block;
+    background: #f2f2f2;
+    padding: 6px 13px;
+    font-size: 12px;
+    color: #333333
+}
+.lw_guanjianzi p:hover{
+    color: #f66400
+}
+#lw_SE_btn{
+    float: left;
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: 0;
+    background: #1269d3;
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer
+}
+/* 购物车 */
+.lw_myshop{
+    float: left;
+    width: 140px;
+    line-height: 38px;
+    border: 1px solid #dbdbdb;
+    background: url(../images/cart_ico.png) 6px center no-repeat;
+    margin-top: 10px;
+    text-indent: 27px;
+    font-size: 14px;
+    margin-left: 35px;
+    transition: background-image .5s,background-color .5s;
+    cursor: pointer
+}
+.lw_myshop .lw_myshop_num{
+    color: #ff0000
+}
+.lw_myshop:hover{
+    background: url(../images/cart_ico_h.png) 6px center no-repeat #f2f2f2;
+}
+/* 消费者告知书 */
+#lw_customer{
+    float: right;
+    font-size: 13px;
+    color: #ff0000;
+    margin-top: 20px;
+    margin-right: 23px
+}
+/* 关键字 */
+.lw_option{
+    float: left;
+    position: relative;
+    
+}
+.lw_option_box{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 268px;
+    border: 1px solid #dbdbdb;
+    border-top: none;
+    padding: 5px 0 15px 17px ;
+    display: none;
+}
+.lw_option_box p{
+    font-size: 12px;
+    width: 71px;
+    background: #f2f2f2;
+    border: 1px solid #e0e0e0;
+    float: left;
+    line-height: 38px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.lw_option_box p:hover{
+    color: #1269d3
+}
+.clear{
+    clear: both;
+}
