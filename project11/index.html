@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.8.3.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.view{
+			perspective: 1000px;
+			position:relative;
+			width: 1200px;
+			height: 800px;
+			margin:0 auto;
+		}
+		.view img{
+			position: absolute;
+			left:50%;
+			top:50%;
+			margin-left: -240px;
+			margin-top: -300px;
+			transition:all .5s;
+			border-radius: 30px;
+		}
+		button{
+			height: 60px;
+			width: 150px;
+			color: white;
+			background: orange;
+			outline: 0;
+			border:0;
+			margin:10px;
+		}
+		.btn{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top:60px;
+			transform: translate(-50%,-50%);
+		}
+		h3{
+			color:skyblue;
+			font-size: 25px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top:180px;
+			transform: translate(-50%,-50%);
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<img src="images/1.png" alt="">
+		<img src="images/2.png" alt="">
+		<img src="images/3.png" alt="">
+		<img src="images/4.png" alt="">
+		<img src="images/5.png" alt="">
+		<div class="btn">
+			<button class="prev">上一张</button>
+			<button class="next">下一张</button>
+		</div>
+		<h3 class="gg">5元一组，把你想要做成轮播图的照片发给我<br>微信:th13243071208;<br>QQ:3011232033</h3>
+	</div>
+</body>
+<script>
+//一个萝卜一个坑
+	var imgs=$(".view img");
+	var keng=[]
+	// console.log(imgs)
+	setTimeout(function(){
+
+		$.each(imgs,function(i){
+			imgs.eq(i).css({
+				transform:"translateX("+(i-2)*300+"px) translateZ(-"+Math.abs(i-2)*200+"px)",
+				zIndex:3-Math.abs(i-2)
+			})
+			keng.push({
+				transform:"translateX("+(i-2)*300+"px) translateZ(-"+Math.abs(i-2)*200+"px)",
+				zIndex:3-Math.abs(i-2)
+			})
+		})
+	},200)
+
+	$(".next").click(function(){
+		keng.unshift(keng[keng.length-1]);
+		keng.pop()
+
+		$.each(keng,function(i,val){
+			imgs.eq(i).css({
+				transform:val.transform,
+				zIndex:val.zIndex
+			})
+		})
+	})
+setTimeout(function(){
+	$(".gg").fadeIn()
+},10000)
+	$(".prev").click(function(){
+		keng.push(keng[0]);
+		keng.shift()
+
+		$.each(keng,function(i,val){
+			imgs.eq(i).css({
+				transform:val.transform,
+				zIndex:val.zIndex
+			})
+		})
+	})
+</script>
+</html>
