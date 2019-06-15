@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<script src="zepto.js"></script>
+	<title>Document</title>
+	<style>
+		html{
+			font-size: 6.6666667vw;
+		}
+		body{
+			max-width: 15rem;
+			overflow: hidden;
+		}
+		*{
+			margin:0;
+			padding:0;
+		}
+		.view{
+			width: 15rem;	
+			height: 7.5rem;
+			position: relative;
+			perspective:10rem;
+		}
+		.view img{
+			display: block;
+			width: 7rem;
+			position: absolute;
+			left:50%;
+			top:2rem;
+			margin-left:-3.5rem; 
+			border-radius: 0.4rem;
+			transition: all .5s;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<img src="images/1.png" alt="">
+		<img src="images/2.png" alt="">
+		<img src="images/3.png" alt="">
+		<img src="images/4.png" alt="">
+		<img src="images/5.png" alt="">
+	</div>
+</body>
+<script>
+var arr=[]
+for(var i=0;i<5;i++){
+
+	$(".view img").eq(i).css({
+		transform:"translateX("+3*(i-2)+"rem) translateZ(-"+1.5*Math.abs(i-2)+"rem)",
+		zIndex:5-Math.abs(i-2)
+	})
+	$(".view img").eq(i)[0].index=i
+	arr.push({
+		transform:"translateX("+3*(i-2)+"rem) translateZ(-"+1.5*Math.abs(i-2)+"rem)",
+		zIndex:5-Math.abs(i-2),
+	})
+}
+
+for(var i=0;i<5;i++){
+	$(".view img").eq(i).click(function(){
+		if($(this)[0].index==0){
+			arr.push(arr[0]);
+			arr.push(arr[1]);
+			arr.shift();
+			arr.shift();
+			$.each(arr,function(k,v){
+				if($(".view img").eq(k)[0].index<3){
+					$(".view img").eq(k)[0].index+=2
+				}else{
+					$(".view img").eq(k)[0].index-=3
+				}
+			})
+			// console.log(arr[1].index)
+		}
+		if($(this)[0].index==1){
+			arr.push(arr[0]);
+			arr.shift()
+			$.each(arr,function(k,v){
+				if($(".view img").eq(k)[0].index<4){
+					$(".view img").eq(k)[0].index++
+				}else{
+					$(".view img").eq(k)[0].index=0
+				}
+			})
+			// console.log(arr.index)
+		}
+		if($(this)[0].index==3){
+			arr.unshift(arr[arr.length-1]);
+			arr.pop()
+			$.each(arr,function(k,v){
+				if($(".view img").eq(k)[0].index==0){
+					$(".view img").eq(k)[0].index=4
+				}else{
+					$(".view img").eq(k)[0].index--
+				}
+			console.log(k,$(".view img").eq(k)[0].index)
+			})
+		}
+		if($(this)[0].index==4){
+			arr.unshift(arr[arr.length-1]);
+			arr.unshift(arr[arr.length-2]);
+			arr.pop()
+			arr.pop()
+			$.each(arr,function(k,v){
+				if($(".view img").eq(k)[0].index<2){
+					$(".view img").eq(k)[0].index+=3
+				}else{
+					$(".view img").eq(k)[0].index-=2
+				}
+			})
+			// console.log(arr.index)
+		}
+		
+
+		$.each(arr,function(j,va){
+			$(".view img").eq(j).css({
+				transform:va.transform,
+				zIndex:va.zIndex
+			})
+			// $(".view img").eq(j)[0].index=va.index
+			// console.log(va.index)
+		})
+	})
+}
+</script>
+</html>
