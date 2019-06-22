@@ -17,32 +17,64 @@
 			text-decoration: none;
 			color:black;
 		}
-		#view{
-			width: 900px;
-			height: 900px;
-			border:1px solid black;
-			margin:15px auto;
+		#tcs{
+			width: 1200px;
+			margin:20px auto;
 			overflow: hidden;
 		}
+		#view{
+			width: 810px;
+			height: 810px;
+			border:1px solid black;
+			margin:0 auto;
+			overflow: hidden;
+			float: left;
+		}
 		#view div{
-			width: 48px;
-			height: 48px;
+			width: 43px;
+			height: 43px;
 			border:1px solid black;
 			float: left;
 		}
 		.blue{
-			background: blue;
+			background: url(images/www.png) -31px 103px;
+			background-size:300%; 
+			border-radius: 50%
 		}
 		.red{
-			background: red
+			background: red;
+			border-radius: 50%
+		}
+		#yourscores{
+			position: fixed;
+			width: 390px;
+			height: 810px;
+			background:pink;
+			top:20px;
+		}
+		#rightside{
+			float: left;
+			position: relative;
+		}
+		#yourscores h3{
+			margin: 20px;
+			color:#333;
 		}
 	</style>
 </head>
 <body>
-	<section id="view">
-	</section>
+	<div id="tcs">
+		<section id="view">
+		</section>
+		<div id="rightside">
+			<div id="yourscores">
+				<h3>您的得分: <span id="myspan">0</span></h3>
+			</div>
+		</div>
+	</div>
 </body>
 <script>
+	var myspan=document.getElementById('myspan')
 	alert("controled by ↑,↓,←,→")
 	var flag=true;
 	var r;
@@ -111,6 +143,7 @@
 				return false
 			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
+				myspan.innerHTML=parseInt(myspan.innerHTML)+1
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
 				r1.x=r.x;
@@ -146,6 +179,7 @@
 				return false
 			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
+				myspan.innerHTML=parseInt(myspan.innerHTML)+1
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
 				r1.x=r.x;
@@ -179,6 +213,7 @@
 				return false
 			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
+				myspan.innerHTML=parseInt(myspan.innerHTML)+1
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
 				r1.x=r.x;
@@ -212,6 +247,7 @@
 				return false
 			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
+				myspan.innerHTML=parseInt(myspan.innerHTML)+1
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
 				r1.x=r.x;
@@ -255,12 +291,14 @@
 	function isDead(){
 		for(var i=1;i<arr.length;i++){
 			if(arr[0].x==arr[i].x&&arr[0].y==arr[i].y){
-				alert("you are died")	
 				$(document).unbind("keyup",control)
 				clearInterval(auto)
+				alert("you are died")	
+				console.log(arr)
 				return true
 			}
 		}
+		console.log(2)
 		return false
 	}
 </script>
