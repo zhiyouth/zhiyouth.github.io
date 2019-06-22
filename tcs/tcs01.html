@@ -98,12 +98,18 @@
 			clearInterval(auto)
 		}else{
 			$("#view").children().eq(arr[0].y).children().eq(arr[0].x).get(0).className="";
+			var oldy=arr[0].y;
+			var oldx=arr[0].x;
 			arr.splice(0,1);
 			var obj={
 				x:arr[arr.length-1].x-1,
 				y:arr[arr.length-1].y
 			}
 			arr.push(obj)
+			if(isDead()){
+				$("#view").children().eq(oldy).children().eq(oldx).get(0).className="red";
+				return false
+			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
@@ -127,12 +133,18 @@
 			clearInterval(auto)
 		}else{
 			$("#view").children().eq(arr[0].y).children().eq(arr[0].x).get(0).className="";
+			var oldy=arr[0].y;
+			var oldx=arr[0].x;
 			arr.splice(0,1);
 			var obj={
 				x:arr[arr.length-1].x,
 				y:arr[arr.length-1].y-1
 			}
 			arr.push(obj)
+			if(isDead()){
+				$("#view").children().eq(oldy).children().eq(oldx).get(0).className="red";
+				return false
+			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
@@ -154,12 +166,18 @@
 			clearInterval(auto)
 		}else{
 			$("#view").children().eq(arr[0].y).children().eq(arr[0].x).get(0).className="";
+			var oldy=arr[0].y;
+			var oldx=arr[0].x;
 			arr.splice(0,1);
 			var obj={
 				x:arr[arr.length-1].x+1,
 				y:arr[arr.length-1].y
 			}
 			arr.push(obj)
+			if(isDead()){
+				$("#view").children().eq(oldy).children().eq(oldx).get(0).className="red";
+				return false
+			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
@@ -181,12 +199,18 @@
 			clearInterval(auto)
 		}else{
 			$("#view").children().eq(arr[0].y).children().eq(arr[0].x).get(0).className="";
+			var oldy=arr[0].y;
+			var oldx=arr[0].x;
 			arr.splice(0,1);
 			var obj={
 				x:arr[arr.length-1].x,
 				y:arr[arr.length-1].y+1
 			}
 			arr.push(obj)
+			if(isDead()){
+				$("#view").children().eq(oldy).children().eq(oldx).get(0).className="red";
+				return false
+			}
 			if(arr[arr.length-1].x==r.x&&arr[arr.length-1].y==r.y){
 				$("#view").children().eq(r.y).children().eq(r.x).removeClass("red")
 				var r1={}
@@ -209,24 +233,35 @@
 				flag=true
 			}
 			if(eve.which==38&&flag){
-				autoTop()
 				clearInterval(auto)
 				auto=setInterval(autoTop,350)
+				autoTop()
 				flag=false
 			}
 			if(eve.which==39&&(!flag)){
-				autoRight()
 				clearInterval(auto)
 				auto=setInterval(autoRight,350)
+				autoRight()
 				flag=true
 			}
 			if(eve.which==40&&flag){
-				autoBottom()
 				clearInterval(auto)
 				auto=setInterval(autoBottom,350)
+				autoBottom()
 				flag=false
 			}
 		}
 	$(document).bind("keyup",control)
+	function isDead(){
+		for(var i=1;i<arr.length;i++){
+			if(arr[0].x==arr[i].x&&arr[0].y==arr[i].y){
+				alert("you are died")	
+				$(document).unbind("keyup",control)
+				clearInterval(auto)
+				return true
+			}
+		}
+		return false
+	}
 </script>
 </html>
